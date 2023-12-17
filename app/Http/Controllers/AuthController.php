@@ -49,7 +49,6 @@ class AuthController extends Controller
             'no_sk_pengurus' => 'nullable|string',
             'no_telp' => 'nullable|string',
             'username' => 'required|string|unique:users',
-            'email' => 'required|email|unique:users',
             'password' => 'required|confirmed',
         ]);
 
@@ -61,7 +60,6 @@ class AuthController extends Controller
         $user->no_sk_pengurus = $request->no_sk_pengurus;
         $user->no_telp = $request->no_telp;
         $user->username = $request->username;
-        $user->email = $request->email;
         $user->password = Hash::make($request->password);
 
         $user->save();

@@ -24,7 +24,6 @@ class User extends Authenticatable
         'no_sk_pengurus',
         'no_telp',
         'username',
-        'email',
         'password',
     ];
 

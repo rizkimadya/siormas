@@ -160,13 +160,6 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control form-control-solid h-auto py-3 px-4" type="email"
-                                        placeholder="Email" name="email" autocomplete="off" />
-                                    @error('email')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
                                     <input class="form-control form-control-solid h-auto py-3 px-4" type="password"
                                         placeholder="Password" name="password" autocomplete="off" />
                                     @error('password')

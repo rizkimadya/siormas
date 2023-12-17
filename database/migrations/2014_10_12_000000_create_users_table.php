@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('no_sk_pengurus')->nullable();
             $table->string('no_telp')->nullable();
             $table->string('username')->unique();
-            $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
