@@ -230,12 +230,21 @@
                                         </div>
                                         <div class="row mt-0">
                                             <div class="form-group col-xl-6">
-                                                <label>Nomor Telepon Ketua  <span class="text-danger" >*</span></label>
+                                                <label>Nomor Telepon Ketua </label>
                                                 <div>
-                                                    <input class="form-control form-control-xl" type="text" />
-                                                    <span class="form-text text-muted">Nomor Telepon Ketua/Sekertaris yang bertanggung jawab dalam organisasi</span>
+                                                    <input class="form-control form-control-xl" disabled="disabled" placeholder="082259300771" />
+                                                    {{-- <span class="form-text text-muted">Nomor Telepon Ketua/Sekertaris yang bertanggung jawab dalam organisasi</span> --}}
                                                 </div>
                                             </div>
+                                            <div class="form-group col-xl-6">
+                                                <label>No SK Pengurus  <span class="text-danger" >*</span></label>
+                                                <div>
+                                                    <input class="form-control form-control-xl" disabled="disabled" placeholder="5674 7654" type="text" />
+                                                    {{-- <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Alamat Sekretariat  <span class="text-danger" >*</span></label>
                                                 <div>
@@ -243,8 +252,6 @@
                                                     <span class="form-text text-muted">Contoh (Jl. Arwana IV No.13, RT/RW 001/001)</span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Keluruhan  <span class="text-danger" >*</span></label>
                                                 <div>
@@ -256,6 +263,8 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Kecamatan  <span class="text-danger" >*</span></label>
                                                 <div>
@@ -267,8 +276,6 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Tempat Pendirian  <span class="text-danger" >*</span></label>
                                                 <div>
@@ -276,6 +283,8 @@
                                                     <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Tahun Pendirian  <span class="text-danger" >*</span></label>
                                                 <div>
@@ -283,8 +292,6 @@
                                                     {{-- <span class="form-text text-muted">Contoh (Jl. Arwana IV No.13, RT/RW 001/001)</span> --}}
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Asas Organisasi</label>
                                                 <div>
@@ -292,19 +299,12 @@
                                                     {{-- <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span> --}}
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row mt-0">
                                             <div class="form-group col-xl-6">
                                                 <label>Tujuan Organisasi</label>
                                                 <div>
                                                     <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
-                                                    {{-- <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-0">
-                                            <div class="form-group col-xl-6">
-                                                <label>No SK Pengurus  <span class="text-danger" >*</span></label>
-                                                <div>
-                                                    <input class="form-control form-control-xl" disabled="disabled" placeholder="5674 7654" type="text" />
                                                     {{-- <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span> --}}
                                                 </div>
                                             </div>

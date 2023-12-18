@@ -297,6 +297,140 @@
         <!--end::Container-->
     </div>
 
+    <!--begin::Detail Card-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Card-->
+            <div class="card card-custom gutter-b">
+                <!--begin::Body-->
+                <div class="card-body p-0">
+                    <!--begin::Form-->
+                    <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
+                        <div class="col-xl-12">
+                            <!--begin::Header-->
+                            <div class="d-flex border-0 pb-6">
+                                <span class="card-icon pr-4 py-0">
+                                    <i class="flaticon2-left-arrow-1 text-dark"></i>
+                                </span>
+                                <h6 class="font-weight-bolder m-0 py-1">
+                                    Detail Kegiatan
+                                </h6>
+                            </div>
+                            <!--end::Header-->
+                            <!--begin::detail-->
+                            <h3 class="font-weight-bolder">Informasi Kegiatan</h3>
+                            <tr class="pb-6">
+                                <td class="p-0 py-4">
+                                    <div class="d-flex justify-content-between pt-6">
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Jenis Kegiatan</h7>
+                                            <h6 class="font-weight-bolder">Sosial Kemasyarakatan</h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Waktu Pelaksana</h7>
+                                            <h6 class="font-weight-bolder">21 Oktober 2023</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-flex justify-content-between pt-6">
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Lokasi Pelaksanaan</h7>
+                                            <h6 class="font-weight-bolder">Jl Serikaya Lorong 4</h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Keluruhan</h7>
+                                            <h6 class="font-weight-bolder">Tempe</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-flex justify-content-between pt-6">
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Kecamatan</h7>
+                                            <h6 class="font-weight-bolder">Tempe</h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Nama Penanggung Jawab/Ketua Panitia</h7>
+                                            <h6 class="font-weight-bolder">Fadil</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-flex justify-content-between pt-6">
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
+                                            <h6 class="font-weight-bolder">Rp 42.249.500</h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Deskripsi Kegiatan</h7>
+                                            <h6 class="font-weight-bolder">Untuk Pengembangan Kepedulian Kemanusiaan dan Bhakti Sosial ke arah yang lebih baik. Membuka akses, peluang, sarana dan
+                                                prasarana yang memadai.</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--end::detail-->
+                            <!--begin::detail-->
+                            <h3 class="font-weight-bolder py-6">Dokumen Kegiatan</h3>
+                            <div class="row m-0">
+                                <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
+                                    <!--begin::Title-->
+                                    <div class="d-flex flex-column flex-grow-1 mr-2">
+                                        <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Laporan Kegiatan/span>
+                                    </div>
+                                    <!--end::Title-->
+                                    <!--begin::Buttonpreview-->
+                                    <a href='#' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                    <!--end::Buttonpreview-->
+                                </div>
+                                <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
+                                    <!--begin::Title-->
+                                    <div class="d-flex flex-column flex-grow-1 mr-2">
+                                        <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Foto Kegiatan 1</span>
+                                    </div>
+                                    <!--end::Title-->
+                                    <!--begin::Buttonpreview-->
+                                    <a href='#' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                    <!--end::Buttonpreview-->
+                                </div>
+                            </div>
+                            <div class="row mt-6 m-0">
+                                <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
+                                        <!--begin::Title-->
+                                        <div class="d-flex flex-column flex-grow-1 mr-2">
+                                            <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Foto Kegiatan 2</span>
+                                        </div>
+                                        <!--end::Title-->
+                                        <!--begin::Buttonpreview-->
+                                        <a href='#' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                        <!--end::Buttonpreview-->
+                                </div>
+                                <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
+                                        <!--begin::Title-->
+                                        <div class="d-flex flex-column flex-grow-1 mr-2">
+                                            <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Foto Kegiatan 3</span>
+                                        </div>
+                                        <!--end::Title-->
+                                        <!--begin::Buttonpreview-->
+                                        <a href='#' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                        <!--end::Buttonpreview-->
+                                </div>
+                            </div>
+                            <!--end::detail-->
+                        </div>
+                    </div>
+                    <!--end::form-->
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Detail Card-->
+
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
@@ -447,5 +581,6 @@
         </div>
         <!--end::Container-->
     </div>
+
 </div>
 @endsection

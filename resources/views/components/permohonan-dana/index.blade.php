@@ -122,7 +122,6 @@
                 <!--end::Aside-->
                 <!--begin::Content-->
                 <div class="flex-row-fluid ml-lg-8">
-                    
                     <!--begin::Advance Table: Widget 7-->
                     {{--<div class="card card-custom gutter-b">
                         <!--begin::Header-->
