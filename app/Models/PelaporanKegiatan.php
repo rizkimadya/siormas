@@ -19,7 +19,7 @@ class PelaporanKegiatan extends Model
         "kelurahan",
         "kecamatan",
         "ketupat",
-        "jumalah_anggaran",
+        "jumlah_anggaran",
         "tujuan_permohonan",
         "laporan_kegiatan",
         "foto_kegiatan1",
