@@ -61,9 +61,9 @@
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="menu-item menu-item-submenu @if (str_contains(Route::currentRouteName(), 'kegiatan-ormas')) menu-item-here @endif menu-item-rel"
+                <li class="menu-item menu-item-submenu {{ $title == "Pelaporan Kegiatan" ? "menu-item-here" : "menu-item-rel" }}"
                     data-menu-toggle="click" aria-haspopup="true">
-                    <a href="{{ url('/kegiatan-ormas/pelaporan') }}" class="menu-link">
+                    <a href="{{ url('/pelaporan-kegiatan/index') }}" class="menu-link">
                         <span class="menu-text">Pelaporan Kegiatan</span>
                         <span class="menu-desc"></span>
                         <i class="menu-arrow"></i>

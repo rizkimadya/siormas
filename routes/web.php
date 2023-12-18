@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PelaporanKegiatanController;
 use App\Http\Controllers\PermohonanDanaController;
 use Illuminate\Support\Facades\Route;
 
@@ -102,12 +103,13 @@ Route::group(['middleware' => ['auth', 'Roles:ormas']], function () {
         Route::get('/detail/{id}', [PermohonanDanaController::class, 'show']);
     });
 
-    Route::group(['prefix' => 'kegiatan-ormas'], function () {
-
-        Route::get('/pelaporan', function () {
-            return view('components.kegiatan-ormas.pelaporan');
-        })->name('kegiatan-ormas.pelaporan');
+    Route::group(['prefix' => 'pelaporan-kegiatan'], function () {
+        Route::get('/index', [PelaporanKegiatanController::class, 'index']);
+        Route::get('/create', [PelaporanKegiatanController::class, 'create']);
+        Route::post('/store', [PelaporanKegiatanController::class, 'store']);
+        Route::get('/detail/{id}', [PelaporanKegiatanController::class, 'show']);
     });
+
 });
 
 // Route::get('permohonan-skt', function () {

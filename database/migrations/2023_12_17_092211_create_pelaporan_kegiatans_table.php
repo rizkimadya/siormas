@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("kelurahan");
             $table->string("kecamatan");
             $table->string("ketupat");
-            $table->string("jumalah_anggaran");
+            $table->string("jumlah_anggaran");
             $table->string("tujuan_permohonan")->nullable();
             $table->string("laporan_kegiatan");
             $table->string("foto_kegiatan1");
