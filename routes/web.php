@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PermohonanDanaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -94,11 +95,11 @@ Route::group(['middleware' => ['auth', 'Roles:ormas']], function () {
         })->name('dashboard-default.permohonanskt');
     });
 
-    Route::group(['prefix' => 'dana-ormas'], function () {
-
-        Route::get('/permohonandana', function () {
-            return view('components.dana-ormas.permohonandana');
-        })->name('dana-ormas.permohonandana');
+    Route::group(['prefix' => 'permohonan-dana'], function () {
+        Route::get('/index', [PermohonanDanaController::class, 'index']);
+        Route::get('/create', [PermohonanDanaController::class, 'create']);
+        Route::post('/store', [PermohonanDanaController::class, 'store']);
+        Route::get('/detail/{id}', [PermohonanDanaController::class, 'show']);
     });
 
     Route::group(['prefix' => 'kegiatan-ormas'], function () {

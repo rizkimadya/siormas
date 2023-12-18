@@ -53,9 +53,9 @@
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="menu-item menu-item-submenu @if (str_contains(Route::currentRouteName(), 'dana-ormas')) menu-item-here @endif menu-item-rel"
+                <li class="menu-item menu-item-submenu {{ $title == "Permohonan Dana" ? "menu-item-here" : "menu-item-rel" }}"
                     data-menu-toggle="click" aria-haspopup="true">
-                    <a href="{{ url('/dana-ormas/permohonandana') }}" class="menu-link">
+                    <a href="{{ url('/permohonan-dana/index') }}" class="menu-link">
                         <span class="menu-text">Permohonan Dana</span>
                         <span class="menu-desc"></span>
                         <i class="menu-arrow"></i>

@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string("periode");
             $table->string("jumlah_anggaran");
-            $table->text("tujuan_permohonan");
+            $table->text("tujuan_permohonan")->nullable();
             $table->string("surat_permohonan");
             $table->string("proposal");
             $table->string("fc_ktp_ketua");
