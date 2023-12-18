@@ -141,8 +141,8 @@
 		</div>
 	</div>
 	<div class="card-footer">
-		<button type="reset" class="btn btn-primary px-8 mr-3">Verifikasi</button>
-		<button type="reset" class="btn btn-danger px-6">Tolak</button>
+		<button type="reset" class="btn btn-danger px-6 mr-3">TOLAK</button>
+		<button type="reset" class="btn btn-primary px-8">VERIFIKASI</button>
 	</div>
 	{{-- <div class="card-footer">
 		<button type="reset" class="btn btn-primary px-6 mr-2">Verifikasi</button>

@@ -34,8 +34,8 @@
 				</div>
 			</form>
 			<div class="card-footer">
-				<button type="reset" class="btn btn-primary px-6 mr-2">Kirim</button>
-				<button type="reset" class="btn btn-secondary">Batal</button>
+				<button type="reset" class="btn btn-secondary mr-2">BATAL</button>
+				<button type="reset" class="btn btn-primary px-6">KIRIM</button>
 			</div>
 		<!--end::Form-->
 	</div>
