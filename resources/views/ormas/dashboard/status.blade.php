@@ -22,7 +22,8 @@
                         <span class="text-primary">Permohonan SKT Anda telah berhasil, silahkan lakukan preview </span>
                         <!--end::Content-->
                     </div>
-                    <a href='#' class="btn btn-primary font-weight-bold px-4 py-2">Preview</a>
+                    <a href="{{ asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
+                        class="btn btn-primary font-weight-bold px-4 py-2">Preview</a>
                     <!--end::Wrapper-->
                 </div>
             @elseif($latestStatusSkt->status == 'Menunggu Verifikasi')
@@ -50,7 +51,8 @@
                         <span class="text-danger">Maaf berkas anda ditolak, Silahkan lakukan permohonan SKT ulang</span>
                         <!--end::Content-->
                     </div>
-                    <a href='{{ url('dashboard-ormas/permohonan-skt/') }}' class="btn btn-danger font-weight-bold px-4 py-2">Buat Permohonan</a>
+                    <a href='{{ url('dashboard-ormas/permohonan-skt/') }}'
+                        class="btn btn-danger font-weight-bold px-4 py-2">Buat Permohonan</a>
                     <!--end::Wrapper-->
                 </div>
             @endif

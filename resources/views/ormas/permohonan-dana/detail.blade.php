@@ -54,7 +54,13 @@
                         <!--begin::Form-->
                         <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
                             <div class="col-xl-12">
-                                <h4 class="mb-4">Keterangan Permohonan Dana</h4>
+                                <div class="d-flex justify-content-between mb-5">
+                                    <h4>Keterangan Permohonan Dana</h4>
+                                    @if ($permohonanDana->file_sp2p != null)
+                                        <a href="{{ asset('storage/sp2p/' . $permohonanDana->file_sp2p) }}" target="_blank"
+                                            class="btn btn-primary">Preview File SP2P</a>
+                                    @endif
+                                </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="mb-3">

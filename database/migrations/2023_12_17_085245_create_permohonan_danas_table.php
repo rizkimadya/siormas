@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string("status");
             $table->unsignedBigInteger("ormas_id");
 
+            // file
+            $table->string("file_sp2p")->nullable();
+            $table->string("keterangan")->nullable();
+
             $table->string("periode");
             $table->string("jumlah_anggaran");
             $table->text("tujuan_permohonan")->nullable();

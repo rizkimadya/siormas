@@ -73,7 +73,7 @@
                             </div>
                             <!--end::Icon-->
                             <!--begin::Content-->
-                            @if (empty($permohonanDana))
+                            @if ($permohonanDana->isempty())
                                 <h4 class="font-size-h4 mb-10">Belum Ada Permohonan Dana</h4>
                             @endif
                             @php

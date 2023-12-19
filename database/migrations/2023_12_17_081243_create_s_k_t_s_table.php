@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('status');
 
+            // file
+            $table->string('skt')->nullable();
+            $table->string('keterangan')->nullable();
+
             // data keorganisasian
             $table->unsignedBigInteger('ormas_id');
             $table->string('bidang_kegiatan')->nullable();

@@ -68,7 +68,7 @@
                             </div>
                             <!--end::Icon-->
                             <!--begin::Content-->
-                            @if (empty($pelaporanKegiatan))
+                            @if ($pelaporanKegiatan->isempty())
                                 <h4 class="font-size-h4 mb-10">Belum Ada Pelaporan</h4>
                             @endif
                             @php

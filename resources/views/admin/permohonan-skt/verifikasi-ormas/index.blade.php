@@ -31,7 +31,7 @@
                             <td>{{ $item->ormas->nama_organisasi }}</td>
                             <td>{{ $item->no_telp }}</td>
                             <td>{{ $item->bidang_kegiatan }}</td>
-                            <td>{{ $item->alamat }}</td>
+                            <td>{{ $item->alamat_sekretariat }}</td>
                             <td>{{ $item->kelurahan }}</td>
                             <td>{{ $item->kecamatan }}</td>
                             <td>

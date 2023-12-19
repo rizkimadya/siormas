@@ -13,6 +13,9 @@ class PelaporanKegiatan extends Model
         "status",
         "ormas_id",
 
+        'skt',
+        'keterangan',
+
         "jenis_kegiatan",
         "waktu_pelaksanaan",
         "lokasi_pelaksanaan",

@@ -49,6 +49,8 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
         // Aksi verifikasi terima
         Route::get('/verifikasi/terima/{id}', [AdminSKTController::class, 'verifikasiTerima'])
             ->name('permohonan-skt.verifikasi.terima');
+
+        Route::post('/skt/{id}', [AdminSKTController::class, 'skt']);
     });
 
 
@@ -70,6 +72,8 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
         // Aksi verifikasi terima
         Route::get('/verifikasi/terima/{id}', [AdminPermohonanDana::class, 'verifikasiTerima'])
             ->name('permohonan-dana.verifikasi.terima');
+
+        Route::post('/sp2p/{id}', [AdminPermohonanDana::class, 'sp2p']);
     });
 
     Route::group(['prefix' => 'pelaporan-kegiatan'], function () {

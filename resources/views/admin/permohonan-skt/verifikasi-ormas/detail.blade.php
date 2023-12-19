@@ -16,7 +16,7 @@
             <div style="border-left: 3px solid #008E42;" class="card-title py-2 m-0 px-4">
                 <h5 class="font-weight-bolder text-primary m-0">Informasi Keorganisasian</h5>
             </div>
-            <div class="card-body p-0">
+            <div class="pt-8">
                 <tr>
                     <td class="text-right">
                         <div class="d-flex justify-content-between">
@@ -89,7 +89,7 @@
             <div style="border-left: 3px solid #008E42;" class="card-title py-2 m-0 px-4">
                 <h5 class="font-weight-bolder text-primary m-0">Informasi Kepengurusan</h5>
             </div>
-            <div class="card-body p-0">
+            <div class="pt-8">
                 <tr>
                     <td class="p-0 py-4">
                         <div class="d-flex justify-content-between">
@@ -162,7 +162,7 @@
             <div style="border-left: 3px solid #008E42;" class="card-title py-2 m-0 px-4">
                 <h5 class="font-weight-bolder text-primary m-0">Dokumen Organisasi</h5>
             </div>
-            <div class=" pt-8">
+            <div class="pt-8">
                 <!--begin::Form-->
                 <div class="row m-0">
                     <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">

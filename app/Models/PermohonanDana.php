@@ -13,6 +13,9 @@ class PermohonanDana extends Model
         "status",
         "ormas_id",
 
+        "file_sp2p",
+        "keterangan",
+
         "periode",
         "jumlah_anggaran",
         "tujuan_permohonan",

@@ -3,10 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\SKT;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminSKTController extends Controller
 {
+    public function skt(Request $request, $id)
+    {
+        $skt = SKT::findOrFail($id);
+
+        // Validasi request
+        $request->validate([
+            'skt' => 'required|mimes:pdf|max:50000', // Sesuaikan dengan aturan validasi file Anda
+            'keterangan' => 'nullable|string', // Sesuaikan dengan aturan validasi keterangan Anda
+        ]);
+
+        // Simpan file SP2P
+        $fileSkt = $request->file('skt');
+        $fileName = time() . '_' . $fileSkt->getClientOriginalName();
+        $fileSkt->storeAs('public/skt', $fileName);
+
+        // Update data SP2P
+        $skt->skt = $fileName;
+        $skt->keterangan = $request->keterangan;
+        $skt->save();
+
+        Alert::success('Sukses', 'Surat SKT Berhasil Dikirim');
+        return redirect('/permohonan-skt/menunggu');
+    }
+
     public function indexOrmasTerdaftar()
     {
         $ormasTerdaftar = SKT::with('ormas')->latest()->get();
@@ -56,7 +81,11 @@ class AdminSKTController extends Controller
 
     public function indexMenunggu()
     {
-        $menunggu = SKT::with('ormas')->where('status', 'Berhasil Verifikasi')->latest()->get();
+        $menunggu = SKT::with('ormas')
+            ->where('status', 'Berhasil Verifikasi')
+            ->whereNull('skt')
+            ->latest()
+            ->get();
         return view('admin.permohonan-skt.menunggu-skt.index', compact('menunggu'));
     }
 

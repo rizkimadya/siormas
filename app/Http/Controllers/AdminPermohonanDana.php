@@ -3,10 +3,36 @@
 namespace App\Http\Controllers;
 
 use App\Models\PermohonanDana;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminPermohonanDana extends Controller
 {
+    public function sp2p(Request $request, $id)
+    {
+        $sp2p = PermohonanDana::findOrFail($id);
+
+        // Validasi request
+        $request->validate([
+            'file_sp2p' => 'required|mimes:pdf|max:50000', // Sesuaikan dengan aturan validasi file Anda
+            'keterangan' => 'nullable|string', // Sesuaikan dengan aturan validasi keterangan Anda
+        ]);
+
+        // Simpan file SP2P
+        $fileSp2p = $request->file('file_sp2p');
+        $fileName = time() . '_' . $fileSp2p->getClientOriginalName();
+        $fileSp2p->storeAs('public/sp2p', $fileName);
+
+        // Update data SP2P
+        $sp2p->file_sp2p = $fileName;
+        $sp2p->keterangan = $request->keterangan;
+        $sp2p->save();
+
+        Alert::success('Sukses', 'Surat SP2P Berhasil Dikirim');
+        return redirect('/permohonan-dana/menunggu');
+    }
+
+
     public function indexOrmasPemohon()
     {
         $ormasPemohon = PermohonanDana::with('ormas')->latest()->get();
@@ -56,7 +82,12 @@ class AdminPermohonanDana extends Controller
 
     public function indexMenunggu()
     {
-        $menunggu = PermohonanDana::with('ormas')->where('status', 'Berhasil Verifikasi')->latest()->get();
+        $menunggu = PermohonanDana::with('ormas')
+            ->where('status', 'Berhasil Verifikasi')
+            ->whereNull('file_sp2p') // Add this condition
+            ->latest()
+            ->get();
+
         return view('admin.permohonan-dana.menunggu-sp2p.index', compact('menunggu'));
     }
 
