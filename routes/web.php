@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PelaporanKegiatanController;
 use App\Http\Controllers\PermohonanDanaController;
@@ -24,23 +25,30 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 
 Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
-    Route::get('/', function () {
-        return view('components.dashboard');
-    })->name("dashboard");
+
+    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+
     Route::group(['prefix' => 'permohonan-skt'], function () {
 
-        Route::get('/ormas-terdaftar', function () {
-            return view('components.permohonan-skt.skt');
-        })->name('permohonan-skt.ormas');
+        Route::get('/ormas-terdaftar', [AdminController::class, 'indexOrmasTerdaftar'])->name('permohonan-skt.ormas');
+        Route::get('/ormas-terdaftar/detail/{id}', [AdminController::class, 'detailOrmasTerdaftar'])->name('permohonan-skt.ormas');
 
-        Route::get('/verifikasi', function () {
-            return view('components.permohonan-skt.verifikasi');
-        })->name('permohonan-skt.verifikasi');
+        Route::get('/verifikasi', [AdminController::class, 'indexVerifikasi'])->name('permohonan-skt.verifikasi');
+        Route::get('/verifikasi/detail/{id}', [AdminController::class, 'detailVerifikasi'])->name('permohonan-skt.verifikasi');
 
-        Route::get('/menunggu', function () {
-            return view('components.permohonan-skt.menunggu');
-        })->name('permohonan-skt.menunggu');
+        Route::get('/menunggu', [AdminController::class, 'indexMenunggu'])->name('permohonan-skt.menunggu');
+        Route::get('/menunggu/detail/{id}', [AdminController::class, 'detailMenunggu'])->name('permohonan-skt.menunggu');
+
+        Route::delete('/destroy/{id}', [AdminController::class, 'destroy']);
     });
+
+    // Aksi verifikasi tolak
+    Route::get('/verifikasi/tolak/{id}', [AdminController::class, 'verifikasiTolak'])
+        ->name('permohonan-skt.verifikasi.tolak');
+
+    // Aksi verifikasi terima
+    Route::get('/verifikasi/terima/{id}', [AdminController::class, 'verifikasiTerima'])
+        ->name('permohonan-skt.verifikasi.terima');
 
     Route::group(['prefix' => 'permohonan-dana'], function () {
 
@@ -80,7 +88,6 @@ Route::group(['middleware' => ['auth', 'Roles:ormas']], function () {
         Route::get('/keorganisasian', [SKTController::class, 'keorganisasian'])->name('dashboard-ormas.keorganisasian');
         Route::get('/kepengurusan', [SKTController::class, 'kepengurusan'])->name('dashboard-ormas.kepengurusan');
         Route::get('/dokumen', [SKTController::class, 'dokumen'])->name('dashboard-ormas.dokumen');
-
     });
 
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<!--begin::Head-->
 
 <head>
     <base href="">
@@ -15,7 +14,8 @@
     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5') }}" rel="stylesheet"
         type="text/css" />
-
+    <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('assets/css/pages/wizard/wizard-1.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
@@ -159,8 +159,8 @@
                         <!--begin::Copyright-->
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">2023©</span>
-                            <a href="http://keenthemes.com/metronic" target="_blank"
-                                class="text-dark-75 text-hover-primary">Kesbangpol Kabupaten Wajo</a>
+                            <a href="" target="_blank" class="text-dark-75 text-hover-primary">Kesbangpol
+                                Kabupaten Wajo</a>
                         </div>
                         <!--end::Copyright-->
                     </div>
@@ -173,364 +173,6 @@
         <!--end::Page-->
     </div>
     <!--end::Main-->
-    <!--begin::Demo Panel-->
-    <div id="kt_demo_panel" class="offcanvas offcanvas-right p-10">
-        <!--begin::Header-->
-        <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
-            <h4 class="font-weight-bold m-0">Select A Demo</h4>
-            <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_demo_panel_close">
-                <i class="ki ki-close icon-xs text-muted"></i>
-            </a>
-        </div>
-        <!--end::Header-->
-        <!--begin::Content-->
-        <div class="offcanvas-content">
-            <!--begin::Wrapper-->
-            <div class="offcanvas-wrapper mb-5 scroll-pull">
-                <h5 class="font-weight-bold mb-4 text-center">Demo 1</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo1.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo1/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo1/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 2</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo offcanvas-demo-active">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo2.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo2/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 3</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo3.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo3/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 4</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo4.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo4/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 5</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo5.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo5/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 6</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo6.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo6/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 7</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo7.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo7/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 8</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo8.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo8/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 9</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo9.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo9/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 10</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo10.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo10/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 11</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo11.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="https://keenthemes.com/metronic/preview/demo11/index.html"
-                            class="btn font-weight-bold btn-primary btn-shadow" target="_blank">Default</a>
-                        <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html"
-                            class="btn btn-light btn-shadow" target="_blank">RTL Version</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 12</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo12.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 13</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo13.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 14</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo14.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 15</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo15.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 16</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo16.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 17</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo17.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 18</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo18.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 19</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo19.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 20</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo20.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 21</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo21.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 22</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo22.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 23</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo23.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 24</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo24.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 25</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo25.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 26</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo26.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 27</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo27.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 28</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo28.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 29</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo29.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-                <h5 class="font-weight-bold mb-4 text-center">Demo 30</h5>
-                <div class="overlay rounded-lg mb-8 offcanvas-demo">
-                    <div class="overlay-wrapper rounded-lg">
-                        <img src="assets//../../../../../../doc/assets/img/demos/demo30.png" alt=""
-                            class="w-100" />
-                    </div>
-                    <div class="overlay-layer">
-                        <a href="#" class="btn font-weight-bold btn-primary btn-shadow disabled">Coming soon</a>
-                    </div>
-                </div>
-            </div>
-            <!--end::Wrapper-->
-            <!--begin::Purchase-->
-            <div class="offcanvas-footer">
-                <a href="https://1.envato.market/EA4JP" target="_blank"
-                    class="btn btn-block btn-danger btn-shadow font-weight-bolder text-uppercase">Buy Metronic Now!</a>
-            </div>
-            <!--end::Purchase-->
-        </div>
-        <!--end::Content-->
-    </div>
     <!--end::Demo Panel-->
     <script>
         var HOST_URL = "https://keenthemes.com/metronic/tools/preview";
@@ -609,6 +251,11 @@
     <script src="{{ asset('assets/js/pages/widgets.js?v=7.0.5') }}"></script>
     <script src="{{ asset('assets/js/pages/custom/wizard/wizard-1.js?v=7.0.5') }}"></script>
     <!--end::Page Scripts-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5') }}"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="{{ asset('assets/js/pages/crud/datatables/data-sources/html.js?v=7.0.5') }}"></script>
 </body>
 <!--end::Body-->
 
