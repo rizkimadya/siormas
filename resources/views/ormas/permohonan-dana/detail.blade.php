@@ -58,23 +58,23 @@
                                 <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Periode</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">Tahun
-                                                {{ $permohonanDana->periode }}</p>
+                                            <h7 class="opacity-70 mb-3">Periode</h7>
+                                            <h7 class="font-weight-bolder">Tahun
+                                                {{ $permohonanDana->periode }}</h7>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Jumlah Anggaran</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">Rp
-                                                {{ number_format($permohonanDana->jumlah_anggaran, 0, ',', '.') }}</p>
+                                            <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
+                                            <h7 class="font-weight-bolder">Rp
+                                                {{ number_format($permohonanDana->jumlah_anggaran, 0, ',', '.') }}</h7>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Tujuan Permohonan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $permohonanDana->tujuan_permohonan }}</p>
+                                            <h7 class="opacity-70 mb-3">Tujuan Permohonan</h7>
+                                            <h7 class="font-weight-bolder">
+                                                {{ $permohonanDana->tujuan_permohonan }}</h7>
                                         </div>
                                     </div>
                                 </div>

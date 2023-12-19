@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SKT;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,7 +31,12 @@ class AuthController extends Controller
                 return redirect('/');
             } elseif ($user->roles == 'ormas') {
                 Alert::success('Berhasil Login', 'Selamat Datang ' . $user->username);
-                return redirect('/dashboard-ormas/status-skt');
+                $skt = SKT::where('ormas_id', $user->id)->first();
+                if ($skt) {
+                    return redirect('/dashboard-ormas/status-skt');
+                } else {
+                    return redirect('dashboard-ormas/');
+                }
             } else {
                 return back();
             }

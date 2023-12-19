@@ -1,4 +1,4 @@
-@extends("components.index")
+@extends("components.index", ["title" => "Permohonan SKT"])
 @section("content")
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->

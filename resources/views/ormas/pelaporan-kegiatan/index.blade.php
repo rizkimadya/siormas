@@ -71,9 +71,21 @@
                             @if (empty($pelaporanKegiatan))
                                 <h4 class="font-size-h4 mb-10">Belum Ada Pelaporan</h4>
                             @endif
+                            @php
+                                $user = auth()->user();
+                                $latestSkt = \App\Models\SKT::where('ormas_id', $user->id)
+                                    ->latest()
+                                    ->first();
+                            @endphp
+
                             <div class="mt-7">
-                                <a href="{{ url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
-                                    class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah Pelaporan</a>
+                                @if ($latestSkt && $latestSkt->status == 'Berhasil Verifikasi')
+                                    <a href="{{ url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
+                                        class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
+                                        Pelaporan</a>
+                                @else
+                                    <h4 class="font-size-h4 mb-10">SKT Belum di Verifikasi</h4>
+                                @endif
                             </div>
                             <!--end::Icon-->
                         </div>

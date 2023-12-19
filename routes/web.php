@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PelaporanKegiatanController;
 use App\Http\Controllers\PermohonanDanaController;
+use App\Http\Controllers\SKTController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -71,30 +72,17 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
 
 Route::group(['middleware' => ['auth', 'Roles:ormas']], function () {
     Route::group(['prefix' => 'dashboard-ormas'], function () {
+        Route::get('/', [SKTController::class, 'index']);
+        Route::get('/permohonan-skt', [SKTController::class, 'create']);
+        Route::post('/permohonan-skt/store', [SKTController::class, 'store']);
 
-        Route::get('/status-skt', function () {
-            return view('components.dashboard-ormas.status');
-        })->name('dashboard-ormas.status');
+        Route::get('/status-skt', [SKTController::class, 'statusSkt'])->name('dashboard-ormas.status');
+        Route::get('/keorganisasian', [SKTController::class, 'keorganisasian'])->name('dashboard-ormas.keorganisasian');
+        Route::get('/kepengurusan', [SKTController::class, 'kepengurusan'])->name('dashboard-ormas.kepengurusan');
+        Route::get('/dokumen', [SKTController::class, 'dokumen'])->name('dashboard-ormas.dokumen');
 
-        Route::get('/keorganisasian', function () {
-            return view('components.dashboard-ormas.keorganisasian');
-        })->name('dashboard-ormas.keorganisasian');
-
-        Route::get('/kepengurusan', function () {
-            return view('components.dashboard-ormas.kepengurusan');
-        })->name('dashboard-ormas.kepengurusan');
-
-        Route::get('/dokumen', function () {
-            return view('components.dashboard-ormas.dokumen');
-        })->name('dashboard-ormas.dokumen');
     });
 
-    Route::group(['prefix' => 'dashboard-default'], function () {
-
-        Route::get('/permohonanskt', function () {
-            return view('components.dashboard-default.permohonanskt');
-        })->name('dashboard-default.permohonanskt');
-    });
 
     Route::group(['prefix' => 'permohonan-dana'], function () {
         Route::get('/index', [PermohonanDanaController::class, 'index']);
@@ -109,7 +97,6 @@ Route::group(['middleware' => ['auth', 'Roles:ormas']], function () {
         Route::post('/store', [PelaporanKegiatanController::class, 'store']);
         Route::get('/detail/{id}', [PelaporanKegiatanController::class, 'show']);
     });
-
 });
 
 // Route::get('permohonan-skt', function () {

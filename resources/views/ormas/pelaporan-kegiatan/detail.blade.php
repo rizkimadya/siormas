@@ -58,59 +58,59 @@
                                 <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Jenis Kegiatan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->jenis_kegiatan }}</p>
+                                            <h7 class="opacity-70 mb-3">Jenis Kegiatan</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->jenis_kegiatan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Waktu Pelaksanaan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
+                                            <h7 class="opacity-70 mb-3">Waktu Pelaksanaan</h7>
+                                            <h6 class="font-weight-bolder">
                                                 {{ \Carbon\Carbon::parse($pelaporanKegiatan->waktu_pelaksanaan)->format('d F Y') }}
-                                            </p>
+                                            </h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Lokasi Pelaksanaan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->lokasi_pelaksanaan }}</p>
+                                            <h7 class="opacity-70 mb-3">Lokasi Pelaksanaan</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->lokasi_pelaksanaan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Kelurahan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->kelurahan }}</p>
+                                            <h7 class="opacity-70 mb-3">Kelurahan</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->kelurahan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Kecamatan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->kecamatan }}</p>
+                                            <h7 class="opacity-70 mb-3">Kecamatan</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->kecamatan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Nama Penanggung Jawab/Ketua Panitia </label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->ketupat }}</p>
+                                            <h7 class="opacity-70 mb-3">Nama Penanggung Jawab/Ketua Panitia </h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->ketupat }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Jumlah Anggaran</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->jumlah_anggaran }}</p>
+                                            <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->jumlah_anggaran }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label mb-0">Tujuan Permohonan</label>
-                                            <p class="font-weight-bold text-dark-75 font-size-lg">
-                                                {{ $pelaporanKegiatan->tujuan_permohonan }}</p>
+                                            <h7 class="opacity-70 mb-3">Tujuan Permohonan</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $pelaporanKegiatan->tujuan_permohonan }}</h6>
                                         </div>
                                     </div>
                                 </div>

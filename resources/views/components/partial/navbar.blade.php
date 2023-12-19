@@ -37,23 +37,19 @@
             </ul>
         @else
             <ul class="menu-nav">
-                <li class="menu-item menu-item-submenu @if (str_contains(Route::currentRouteName(), 'dashboard-ormas')) menu-item-here @endif menu-item-rel"
+                <li class="menu-item menu-item-submenu {{ in_array($title, ['Dashboard Ormas', 'Permohonan SKT']) ? 'menu-item-here' : 'menu-item-rel' }}"
                     data-menu-toggle="click" aria-haspopup="true">
-                    <a href="{{ url('/dashboard-ormas/status-skt') }}" class="menu-link">
+                    @php
+                        $skt = \App\Models\SKT::where('ormas_id', auth()->user()->id)->first();
+                    @endphp
+
+                    <a href="{{ $skt ? url('/dashboard-ormas/status-skt') : url('/dashboard-ormas') }}"
+                        class="menu-link">
                         <span class="menu-text">Dashboard Ormas</span>
-                        <span class="menu-desc"></span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="menu-item menu-item-submenu @if (str_contains(Route::currentRouteName(), 'dashboard-default')) menu-item-here @endif menu-item-rel"
-                    data-menu-toggle="click" aria-haspopup="true">
-                    <a href="{{ url('/dashboard-default/permohonanskt') }}" class="menu-link">
-                        <span class="menu-text">Dashboard Default</span>
-                        <span class="menu-desc"></span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-submenu {{ $title == "Permohonan Dana" ? "menu-item-here" : "menu-item-rel" }}"
+                <li class="menu-item menu-item-submenu {{ $title == 'Permohonan Dana' ? 'menu-item-here' : 'menu-item-rel' }}"
                     data-menu-toggle="click" aria-haspopup="true">
                     <a href="{{ url('/permohonan-dana/index') }}" class="menu-link">
                         <span class="menu-text">Permohonan Dana</span>
@@ -61,7 +57,7 @@
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
-                <li class="menu-item menu-item-submenu {{ $title == "Pelaporan Kegiatan" ? "menu-item-here" : "menu-item-rel" }}"
+                <li class="menu-item menu-item-submenu {{ $title == 'Pelaporan Kegiatan' ? 'menu-item-here' : 'menu-item-rel' }}"
                     data-menu-toggle="click" aria-haspopup="true">
                     <a href="{{ url('/pelaporan-kegiatan/index') }}" class="menu-link">
                         <span class="menu-text">Pelaporan Kegiatan</span>

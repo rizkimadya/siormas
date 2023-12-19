@@ -17,7 +17,7 @@ return new class extends Migration
 
             // data keorganisasian
             $table->unsignedBigInteger('ormas_id');
-            $table->string('bidang_kegitan')->nullable();
+            $table->string('bidang_kegiatan')->nullable();
             $table->string('no_telp');
             $table->text('alamat_sekretariat');
             $table->string('kelurahan');

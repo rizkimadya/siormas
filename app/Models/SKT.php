@@ -12,8 +12,9 @@ class SKT extends Model
     protected $fillable = [
         'status',
 
+        // keorganisasian
         'ormas_id',
-        'bidang_kegitan',
+        'bidang_kegiatan',
         'no_telp',
         'alamat_sekretariat',
         'kelurahan',
