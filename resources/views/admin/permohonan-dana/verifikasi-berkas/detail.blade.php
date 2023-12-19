@@ -118,7 +118,6 @@
 
             <a href="/permohonan-dana/verifikasi/terima/{{ $verifikasi->id }}" class="btn btn-primary px-8"
                 onclick="return confirm('Anda yakin ingin memverifikasi permohonan ini?')">VERIFIKASI</a>
-
         </div>
         {{-- <div class="card-footer">
 		<button type="reset" class="btn btn-primary px-6 mr-2">Verifikasi</button>

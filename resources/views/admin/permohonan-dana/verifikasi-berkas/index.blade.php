@@ -19,6 +19,7 @@
                         <th>Periode</th>
                         <th>Jumlah Anggaran</th>
                         <th>Tujuan Permohonan</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -28,8 +29,10 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->ormas->nama_organisasi }}</td>
                             <td>{{ $item->periode }}</td>
-                            <td>{{ $item->jumlah_anggaran }}</td>
+                            <td>Rp.
+                                {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
                             <td>{{ $item->tujuan_permohonan }}</td>
+                            <td>{{ $item->status }}</td>
                             <td>
                                 <a class="btn btn-bg-primary text-white"
                                     href="/permohonan-dana/verifikasi/detail/{{ $item->id }}">Verifikasi</a>

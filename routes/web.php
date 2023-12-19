@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminPelaporanKegiatan;
 use App\Http\Controllers\AdminPermohonanDana;
 use App\Http\Controllers\AdminSKTController;
 use App\Http\Controllers\AuthController;
@@ -72,14 +73,20 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
     });
 
     Route::group(['prefix' => 'pelaporan-kegiatan'], function () {
+        Route::get('/laporan-ormas', [AdminPelaporanKegiatan::class, 'indexOrmasPemohon'])->name('pelaporan-kegiatan.laporan');
+        Route::get('/laporan-ormas/detail/{id}', [AdminPelaporanKegiatan::class, 'detailOrmasPemohon'])->name('pelaporan-kegiatan.laporan');
 
-        Route::get('/laporan-ormas', function () {
-            return view('components.pelaporan-kegiatan.laporan');
-        })->name('pelaporan-kegiatan.laporan');
+        Route::get('/verifikasi', [AdminPelaporanKegiatan::class, 'indexVerifikasi'])->name('pelaporan-kegiatan.verifikasi');
+        Route::get('/verifikasi/detail/{id}', [AdminPelaporanKegiatan::class, 'detailVerifikasi'])->name('pelaporan-kegiatan.verifikasi');
 
-        Route::get('/verifikasi', function () {
-            return view('components.pelaporan-kegiatan.verifikasi');
-        })->name('pelaporan-kegiatan.verifikasi');
+        Route::delete('/destroy/{id}', [AdminPelaporanKegiatan::class, 'destroy']);
+
+        // Aksi verifikasi tolak
+        Route::get('/verifikasi/tolak/{id}', [AdminPelaporanKegiatan::class, 'verifikasiTolak'])
+            ->name('pelaporan-kegiatan.verifikasi.tolak');
+        // Aksi verifikasi terima
+        Route::get('/verifikasi/terima/{id}', [AdminPelaporanKegiatan::class, 'verifikasiTerima'])
+            ->name('pelaporan-kegiatan.verifikasi.terima');
     });
 });
 

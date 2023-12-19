@@ -102,8 +102,9 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
-                                            <h6 class="font-weight-bolder">
-                                                {{ $pelaporanKegiatan->jumlah_anggaran }}</h6>
+                                            <h6 class="font-weight-bolder"> Rp.
+                                                {{ number_format($pelaporanKegiatan->jumlah_anggaran, 0, ',', '.') }}
+                                            </h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">

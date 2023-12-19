@@ -26,4 +26,9 @@ class PelaporanKegiatan extends Model
         "foto_kegiatan2",
         "foto_kegiatan3",
     ];
+
+    public function ormas()
+    {
+        return $this->belongsTo(User::class, 'ormas_id');
+    }
 }
