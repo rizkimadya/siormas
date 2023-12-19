@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminPermohonanDana;
+use App\Http\Controllers\AdminSKTController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PelaporanKegiatanController;
 use App\Http\Controllers\PermohonanDanaController;
@@ -28,41 +30,45 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
 
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
 
+
     Route::group(['prefix' => 'permohonan-skt'], function () {
+        Route::get('/ormas-terdaftar', [AdminSKTController::class, 'indexOrmasTerdaftar'])->name('permohonan-skt.ormas');
+        Route::get('/ormas-terdaftar/detail/{id}', [AdminSKTController::class, 'detailOrmasTerdaftar'])->name('permohonan-skt.ormas');
 
-        Route::get('/ormas-terdaftar', [AdminController::class, 'indexOrmasTerdaftar'])->name('permohonan-skt.ormas');
-        Route::get('/ormas-terdaftar/detail/{id}', [AdminController::class, 'detailOrmasTerdaftar'])->name('permohonan-skt.ormas');
+        Route::get('/verifikasi', [AdminSKTController::class, 'indexVerifikasi'])->name('permohonan-skt.verifikasi');
+        Route::get('/verifikasi/detail/{id}', [AdminSKTController::class, 'detailVerifikasi'])->name('permohonan-skt.verifikasi');
 
-        Route::get('/verifikasi', [AdminController::class, 'indexVerifikasi'])->name('permohonan-skt.verifikasi');
-        Route::get('/verifikasi/detail/{id}', [AdminController::class, 'detailVerifikasi'])->name('permohonan-skt.verifikasi');
+        Route::get('/menunggu', [AdminSKTController::class, 'indexMenunggu'])->name('permohonan-skt.menunggu');
+        Route::get('/menunggu/detail/{id}', [AdminSKTController::class, 'detailMenunggu'])->name('permohonan-skt.menunggu');
 
-        Route::get('/menunggu', [AdminController::class, 'indexMenunggu'])->name('permohonan-skt.menunggu');
-        Route::get('/menunggu/detail/{id}', [AdminController::class, 'detailMenunggu'])->name('permohonan-skt.menunggu');
-
-        Route::delete('/destroy/{id}', [AdminController::class, 'destroy']);
+        Route::delete('/destroy/{id}', [AdminSKTController::class, 'destroy']);
+        // Aksi verifikasi tolak
+        Route::get('/verifikasi/tolak/{id}', [AdminSKTController::class, 'verifikasiTolak'])
+            ->name('permohonan-skt.verifikasi.tolak');
+        // Aksi verifikasi terima
+        Route::get('/verifikasi/terima/{id}', [AdminSKTController::class, 'verifikasiTerima'])
+            ->name('permohonan-skt.verifikasi.terima');
     });
 
-    // Aksi verifikasi tolak
-    Route::get('/verifikasi/tolak/{id}', [AdminController::class, 'verifikasiTolak'])
-        ->name('permohonan-skt.verifikasi.tolak');
-
-    // Aksi verifikasi terima
-    Route::get('/verifikasi/terima/{id}', [AdminController::class, 'verifikasiTerima'])
-        ->name('permohonan-skt.verifikasi.terima');
 
     Route::group(['prefix' => 'permohonan-dana'], function () {
+        Route::get('/ormas-pemohon', [AdminPermohonanDana::class, 'indexOrmasPemohon'])->name('permohonan-dana.dana');
+        Route::get('/ormas-pemohon/detail/{id}', [AdminPermohonanDana::class, 'detailOrmasPemohon'])->name('permohonan-dana.dana');
 
-        Route::get('/ormas-pemohon', function () {
-            return view('components.permohonan-dana.dana');
-        })->name('permohonan-dana.dana');
+        Route::get('/verifikasi', [AdminPermohonanDana::class, 'indexVerifikasi'])->name('permohonan-dana.verifikasi');
+        Route::get('/verifikasi/detail/{id}', [AdminPermohonanDana::class, 'detailVerifikasi'])->name('permohonan-dana.verifikasi');
 
-        Route::get('/verifikasi', function () {
-            return view('components.permohonan-dana.verifikasi');
-        })->name('permohonan-dana.verifikasi');
+        Route::get('/menunggu', [AdminPermohonanDana::class, 'indexMenunggu'])->name('permohonan-dana.menunggu');
+        Route::get('/menunggu/detail/{id}', [AdminPermohonanDana::class, 'detailMenunggu'])->name('permohonan-dana.menunggu');
 
-        Route::get('/menunggu', function () {
-            return view('components.permohonan-dana.menunggu');
-        })->name('permohonan-dana.menunggu');
+        Route::delete('/destroy/{id}', [AdminPermohonanDana::class, 'destroy']);
+
+        // Aksi verifikasi tolak
+        Route::get('/verifikasi/tolak/{id}', [AdminPermohonanDana::class, 'verifikasiTolak'])
+            ->name('permohonan-dana.verifikasi.tolak');
+        // Aksi verifikasi terima
+        Route::get('/verifikasi/terima/{id}', [AdminPermohonanDana::class, 'verifikasiTerima'])
+            ->name('permohonan-dana.verifikasi.terima');
     });
 
     Route::group(['prefix' => 'pelaporan-kegiatan'], function () {

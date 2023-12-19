@@ -1,10 +1,10 @@
-@extends('admin.permohonan-skt.index')
+@extends('admin.permohonan-dana.index')
 @section('detail')
     <div class="card card-custom">
         <!--begin::Header-->
         <div class="card-body d-flex border-0">
             <h6 class="font-weight-bolder m-0 py-1">
-                Menunggu SKT
+                Menunggu SP2P
             </h6>
         </div>
         <!--end::Header-->
@@ -16,11 +16,9 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Organisasi</th>
-                        <th>No Telp</th>
-                        <th>Bidang Kegiatan</th>
-                        <th>Alamat</th>
-                        <th>Kelurahan</th>
-                        <th>Kecamatan</th>
+                        <th>Periode</th>
+                        <th>Jumlah Anggaran</th>
+                        <th>Tujuan Permohonan</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -29,16 +27,16 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->ormas->nama_organisasi }}</td>
-                            <td>{{ $item->no_telp }}</td>
-                            <td>{{ $item->bidang_kegiatan }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>{{ $item->kelurahan }}</td>
-                            <td>{{ $item->kecamatan }}</td>
+                            <td>{{ $item->periode }}</td>
+                            <td>{{ $item->jumlah_anggaran }}</td>
+                            <td>{{ $item->tujuan_permohonan }}</td>
                             <td>
-                                <a class="btn btn-bg-primary text-white" href="/permohonan-skt/menunggu/detail/{{ $item->id }}">Kirim SKT</a>
+                                <a class="btn btn-bg-primary text-white"
+                                    href="/permohonan-dana/menunggu/detail/{{ $item->id }}">Kirim SP2P</a>
                             </td>
                         </tr>
                     @endforeach
+                </tbody>
                 </tbody>
             </table>
         </div>

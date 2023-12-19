@@ -1,10 +1,10 @@
-@extends('admin.permohonan-skt.index')
+@extends('admin.permohonan-dana.index')
 @section('detail')
     <div class="card card-custom">
         <!--begin::Header-->
         <div class="card-body d-flex border-0">
             <h6 class="font-weight-bolder m-0 py-1">
-                Ormas Terdaftar
+                Ormas Pemohon
             </h6>
         </div>
         <!--end::Header-->
@@ -16,30 +16,26 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Organisasi</th>
-                        <th>No Telp</th>
-                        <th>Bidang Kegiatan</th>
-                        <th>Alamat</th>
-                        <th>Kelurahan</th>
-                        <th>Kecamatan</th>
+                        <th>Periode</th>
+                        <th>Jumlah Anggaran</th>
+                        <th>Tujuan Permohonan</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($ormasTerdaftar as $item)
+                    @foreach ($ormasPemohon as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->ormas->nama_organisasi }}</td>
-                            <td>{{ $item->no_telp }}</td>
-                            <td>{{ $item->bidang_kegiatan }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>{{ $item->kelurahan }}</td>
-                            <td>{{ $item->kecamatan }}</td>
+                            <td>{{ $item->periode }}</td>
+                            <td>{{ $item->jumlah_anggaran }}</td>
+                            <td>{{ $item->tujuan_permohonan }}</td>
                             <td>
                                 <div class="d-flex gap-2">
                                     <a class="btn btn-bg-light"
-                                        href="/permohonan-skt/ormas-terdaftar/detail/{{ $item->id }}"><i
+                                        href="/permohonan-dana/ormas-pemohon/detail/{{ $item->id }}"><i
                                             class="nav-icon la la-eye"></i></a>
-                                    <form action="/permohonan-skt/destroy/{{ $item->id }}" method="POST">
+                                    <form action="/permohonan-dana/destroy/{{ $item->id }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-bg-light"

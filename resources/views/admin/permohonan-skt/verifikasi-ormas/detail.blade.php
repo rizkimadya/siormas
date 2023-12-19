@@ -271,10 +271,10 @@
             </div>
         </div>
         <div class="card-footer justify-content-end d-flex">
-            <a href="/verifikasi/tolak/{{ $verifikasi->id }}" class="btn btn-danger px-6 mr-3"
+            <a href="/permohonan-skt/verifikasi/tolak/{{ $verifikasi->id }}" class="btn btn-danger px-6 mr-3"
                 onclick="return confirm('Anda yakin ingin menolak permohonan ini?')">TOLAK</a>
 
-            <a href="/verifikasi/terima/{{ $verifikasi->id }}" class="btn btn-primary px-8"
+            <a href="/permohonan-skt/verifikasi/terima/{{ $verifikasi->id }}" class="btn btn-primary px-8"
                 onclick="return confirm('Anda yakin ingin memverifikasi permohonan ini?')">VERIFIKASI</a>
 
         </div>
