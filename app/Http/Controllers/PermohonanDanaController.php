@@ -12,7 +12,7 @@ class PermohonanDanaController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $permohonanDana = PermohonanDana::where('ormas_id', $user->id)->get();
+        $permohonanDana = PermohonanDana::where('ormas_id', $user->id)->latest()->get();
         return view('ormas.permohonan-dana.index', compact('permohonanDana'));
     }
 

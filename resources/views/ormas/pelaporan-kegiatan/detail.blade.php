@@ -64,45 +64,55 @@
                                 </div>
                                 <!--Revisi::Tambah Alert-->
                                 <!--begin::Alert-->
-                                <div style="background-color:#ECFDF5" class="alert border-primary d-flex align-items-center p-5 m-0">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column mr-auto">
-                                        <!--begin::Title-->
-                                        <h6 class="font-weight-bolder text-primary pb-1">Laporan Diterima</h6>
-                                        <!--end::Title-->
-                                        <!--begin::Content-->
-                                        <span class="text-primary">Laporan Anda telah berhasil diterima</span>
-                                        <!--end::Content-->
+                                @if ($pelaporanKegiatan->status == 'Berhasil Verifikasi')
+                                    <div style="background-color:#ECFDF5"
+                                        class="alert border-primary d-flex align-items-center p-5 m-0">
+                                        <!--begin::Wrapper-->
+                                        <div class="d-flex flex-column mr-auto">
+                                            <!--begin::Title-->
+                                            <h6 class="font-weight-bolder text-primary pb-1">Laporan Diterima</h6>
+                                            <!--end::Title-->
+                                            <!--begin::Content-->
+                                            <span class="text-primary">Laporan Anda telah berhasil diterima</span>
+                                            <!--end::Content-->
+                                        </div>
                                     </div>
-                                </div>
-                                <div style="background-color:#FFF9E2" class="alert border-warning d-flex align-items-center p-5 mt-4">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column mr-auto">
-                                        <!--begin::Title-->
-                                        <h6 class="font-weight-bolder text-warning pb-1">Menunggu Verifikasi Laporan</h6>
-                                        <!--end::Title-->
-                                        <!--begin::Content-->
-                                        <span class="text-warning">Pelaporan kegiatan Anda masih dalam proses verifikasi oleh pihak Verifikator
-                                            Bankesbangpol</span>
-                                        <!--end::Content-->
+                                @elseif($pelaporanKegiatan->status == 'Menunggu Verifikasi')
+                                    <div style="background-color:#FFF9E2"
+                                        class="alert border-warning d-flex align-items-center p-5 mt-4">
+                                        <!--begin::Wrapper-->
+                                        <div class="d-flex flex-column mr-auto">
+                                            <!--begin::Title-->
+                                            <h6 class="font-weight-bolder text-warning pb-1">Menunggu Verifikasi Laporan
+                                            </h6>
+                                            <!--end::Title-->
+                                            <!--begin::Content-->
+                                            <span class="text-warning">Pelaporan kegiatan Anda masih dalam proses verifikasi
+                                                oleh pihak Verifikator
+                                                Bankesbangpol</span>
+                                            <!--end::Content-->
+                                        </div>
+                                        <!--end::Wrapper-->
                                     </div>
-                                    <!--end::Wrapper-->
-                                </div>
-                                <div style="background-color:#F6EBEB" class="alert border-danger d-flex align-items-center p-5 mt-4">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column mr-auto">
-                                        <!--begin::Title-->
-                                        <h6 class="font-weight-bolder text-danger pb-1">Laporan Ditolak</h6>
-                                        <!--end::Title-->
-                                        <!--begin::Content-->
-                                        <span class="text-danger">Maaf Laporan Anda ditolak</span>
-                                        <span class="text-black">Keterangan: Pada lembar pengesahan tidak ada tanda tangan ketua</span>
-                                        <!--end::Content-->
+                                @else
+                                    <div style="background-color:#F6EBEB"
+                                        class="alert border-danger d-flex align-items-center p-5 mt-4">
+                                        <!--begin::Wrapper-->
+                                        <div class="d-flex flex-column mr-auto">
+                                            <!--begin::Title-->
+                                            <h6 class="font-weight-bolder text-danger pb-1">Laporan Ditolak</h6>
+                                            <!--end::Title-->
+                                            <!--begin::Content-->
+                                            <span class="text-danger">Maaf Laporan Anda ditolak</span>
+                                            <span class="text-black">Keterangan: {{ $pelaporanKegiatan->keterangan }}</span>
+                                            <!--end::Content-->
+                                        </div>
+                                        <!--end::Wrapper-->
                                     </div>
-                                    <!--end::Wrapper-->
-                                </div>
+                                @endif
+
                                 <!--end::Alert-->
-                                <h4 class="mb-4">Keterangan Pelaporan Kegiatan</h4>
+                                <h4 class="mt-8">Keterangan Pelaporan Kegiatan</h4>
                                 <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="mb-3">

@@ -12,7 +12,7 @@ class PelaporanKegiatanController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $pelaporanKegiatan = PelaporanKegiatan::where('ormas_id', $user->id)->get();
+        $pelaporanKegiatan = PelaporanKegiatan::where('ormas_id', $user->id)->latest()->get();
         return view('ormas.pelaporan-kegiatan.index', compact('pelaporanKegiatan'));
     }
 

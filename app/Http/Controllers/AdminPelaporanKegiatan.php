@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PelaporanKegiatan;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminPelaporanKegiatan extends Controller
@@ -32,12 +33,13 @@ class AdminPelaporanKegiatan extends Controller
         return view('admin.pelaporan-kegiatan.verifikasi-berkas.detail', compact('verifikasi'));
     }
 
-    public function verifikasiTolak($id)
+    public function verifikasiTolak(Request $request, $id)
     {
         $verifikasi = PelaporanKegiatan::findOrFail($id);
 
         // Update status menjadi "Ditolak"
         $verifikasi->status = 'Berkas Ditolak';
+        $verifikasi->keterangan = $request->keterangan;
         $verifikasi->save();
         Alert::success('Sukses', 'Verifikasi Ditolak');
         return redirect('/pelaporan-kegiatan/verifikasi');

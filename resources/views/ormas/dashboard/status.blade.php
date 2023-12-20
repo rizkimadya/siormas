@@ -63,6 +63,7 @@
                         <!--end::Title-->
                         <!--begin::Content-->
                         <span class="text-danger">Maaf berkas anda ditolak, Silahkan lakukan permohonan SKT ulang</span>
+                        <span class="text-black">Keterangan: {{ $latestStatusSkt->keterangan }}</span>
                         <!--end::Content-->
                     </div>
                     <a href='{{ url('dashboard-ormas/permohonan-skt/') }}'

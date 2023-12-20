@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string("status");
             $table->unsignedBigInteger("ormas_id");
 
+            $table->string("keterangan")->nullable();
+
             $table->string("jenis_kegiatan");
             $table->string("waktu_pelaksanaan");
             $table->text("lokasi_pelaksanaan");

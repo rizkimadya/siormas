@@ -58,12 +58,13 @@ class AdminSKTController extends Controller
         return view('admin.permohonan-skt.verifikasi-ormas.detail', compact('verifikasi'));
     }
 
-    public function verifikasiTolak($id)
+    public function verifikasiTolak(Request $request, $id)
     {
         $verifikasi = SKT::findOrFail($id);
 
         // Update status menjadi "Ditolak"
         $verifikasi->status = 'Berkas Ditolak';
+        $verifikasi->keterangan = $request->keterangan;
         $verifikasi->save();
         Alert::success('Sukses', 'Verifikasi Ditolak');
         return redirect('/permohonan-skt/verifikasi');

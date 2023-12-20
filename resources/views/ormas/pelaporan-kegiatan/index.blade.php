@@ -214,13 +214,15 @@
                                     </div>
                                     <!--end: Item-->
                                 </div>
-                                @if ($item->status == 'Menunggu Verifikasi')
-                                    <span style="background-color:#FFF9E2; display:flex; margin-left:auto;"
+                                @if ($item->status == 'Berhasil Verifikasi')
+                                    <span style="background-color:#ECFDF5; margin-left:auto; display:flex;"
+                                        class="label text-primary label-xl label-inline">Verifikasi Laporan Berhasil</span>
+                                @elseif($item->status == 'Menunggu Verifikasi')
+                                    <span style="background-color:#FFF9E2; margin-left:auto; display:flex;"
                                         class="label text-warning label-xl label-inline">Menunggu Verifikasi</span>
                                 @else
-                                    <span style="background-color:#ECFDF5; display:flex; margin-left:auto;"
-                                        class="label text-primary label-xl label-inline">Verifikasi Laporan Berhasil
-                                    </span>
+                                    <span style="background-color:#F6EBEB; margin-left:auto; display:flex;"
+                                        class="label text-danger label-xl label-inline">Permohonan Ditolak</span>
                                 @endif
                             </div>
                             <!--end::Bottom-->

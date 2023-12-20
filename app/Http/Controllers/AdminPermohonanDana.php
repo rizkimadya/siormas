@@ -59,12 +59,13 @@ class AdminPermohonanDana extends Controller
         return view('admin.permohonan-dana.verifikasi-berkas.detail', compact('verifikasi'));
     }
 
-    public function verifikasiTolak($id)
+    public function verifikasiTolak(Request $request, $id)
     {
         $verifikasi = PermohonanDana::findOrFail($id);
 
         // Update status menjadi "Ditolak"
         $verifikasi->status = 'Berkas Ditolak';
+        $verifikasi->keterangan = $request->keterangan;
         $verifikasi->save();
         Alert::success('Sukses', 'Verifikasi Ditolak');
         return redirect('/permohonan-dana/verifikasi');

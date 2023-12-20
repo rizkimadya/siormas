@@ -270,9 +270,41 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer justify-content-end d-flex">
-            <a href="/permohonan-skt/verifikasi/tolak/{{ $verifikasi->id }}" class="btn btn-danger px-6 mr-3"
-                onclick="return confirm('Anda yakin ingin menolak permohonan ini?')">TOLAK</a>
+        <div class="card-footer justify-content-end d-flex" style="gap:10px;">
+
+            <!-- Button trigger modal-->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                Tolak
+            </button>
+
+            <!-- Modal-->
+            <div class="modal fade" id="exampleModalCenter" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdrop" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Verifikasi Tolak</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i aria-hidden="true" class="ki ki-close"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/permohonan-skt/verifikasi/tolak/{{ $verifikasi->id }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="exampleTextarea">Keterangan</label>
+                                    <textarea class="form-control" name="keterangan" rows="3"></textarea>
+                                </div>
+                                <div class="pb-5 justify-content-end d-flex" style="gap:10px;">
+                                    <button type="button" class="btn btn-light font-weight-bold"
+                                        data-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary px-6 ">KIRIM</button>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
             <a href="/permohonan-skt/verifikasi/terima/{{ $verifikasi->id }}" class="btn btn-primary px-8"
                 onclick="return confirm('Anda yakin ingin memverifikasi permohonan ini?')">VERIFIKASI</a>

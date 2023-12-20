@@ -55,10 +55,10 @@
     @include('sweetalert::alert')
     <div id="kt_header_mobile" class="header-mobile">
         <!--begin::Logo-->
-        <a href="index.html">
+        <span>
             <img alt="Logo" src="{{ asset('assets/media/logos/logo-ormas.png') }}"
                 class="logo-default max-h-30px" />
-        </a>
+        </span>
         <!--end::Logo-->
         <!--begin::Toolbar-->
         <div class="d-flex align-items-center">
@@ -100,10 +100,10 @@
                         <div class="d-flex align-items-stretch mr-3">
                             <!--begin::Header Logo-->
                             <div class="header-logo">
-                                <a href="index.html">
+                                <span>
                                     <img alt="Logo" src="{{ asset('assets/media/logos/logo-ormas.png') }}"
                                         class="logo-default max-h-40px" />
-                                </a>
+                                </span>
                             </div>
                             <!--end::Header Logo-->
                             <!--begin::Header Menu Wrapper-->
@@ -140,7 +140,12 @@
                                         </div>
                                         <!--end::Symbol-->
                                         <!--begin::Text-->
-                                        <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">Sean Stone</div>
+                                        @if (auth()->user()->roles == 'admin')
+                                            <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">Admin</div>
+                                        @else
+                                            <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">
+                                                {{ auth()->user()->nama_organisasi }}</div>
+                                        @endif
                                         <!-- <span class="label label-light-success label-lg font-weight-bold label-inline">3 messages</span> -->
                                         <!--end::Text-->
                                     </div>

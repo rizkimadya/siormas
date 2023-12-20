@@ -44,7 +44,7 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
 
         Route::delete('/destroy/{id}', [AdminSKTController::class, 'destroy']);
         // Aksi verifikasi tolak
-        Route::get('/verifikasi/tolak/{id}', [AdminSKTController::class, 'verifikasiTolak'])
+        Route::post('/verifikasi/tolak/{id}', [AdminSKTController::class, 'verifikasiTolak'])
             ->name('permohonan-skt.verifikasi.tolak');
         // Aksi verifikasi terima
         Route::get('/verifikasi/terima/{id}', [AdminSKTController::class, 'verifikasiTerima'])
@@ -67,7 +67,7 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
         Route::delete('/destroy/{id}', [AdminPermohonanDana::class, 'destroy']);
 
         // Aksi verifikasi tolak
-        Route::get('/verifikasi/tolak/{id}', [AdminPermohonanDana::class, 'verifikasiTolak'])
+        Route::post('/verifikasi/tolak/{id}', [AdminPermohonanDana::class, 'verifikasiTolak'])
             ->name('permohonan-dana.verifikasi.tolak');
         // Aksi verifikasi terima
         Route::get('/verifikasi/terima/{id}', [AdminPermohonanDana::class, 'verifikasiTerima'])
@@ -86,7 +86,7 @@ Route::group(['middleware' => ['auth', 'Roles:admin']], function () {
         Route::delete('/destroy/{id}', [AdminPelaporanKegiatan::class, 'destroy']);
 
         // Aksi verifikasi tolak
-        Route::get('/verifikasi/tolak/{id}', [AdminPelaporanKegiatan::class, 'verifikasiTolak'])
+        Route::post('/verifikasi/tolak/{id}', [AdminPelaporanKegiatan::class, 'verifikasiTolak'])
             ->name('pelaporan-kegiatan.verifikasi.tolak');
         // Aksi verifikasi terima
         Route::get('/verifikasi/terima/{id}', [AdminPelaporanKegiatan::class, 'verifikasiTerima'])

@@ -29,10 +29,6 @@
                         <label class="custom-file-label" for="customFile">Pilih file</label>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleTextarea">Keterangan</label>
-                    <textarea class="form-control" name="keterangan" rows="3"></textarea>
-                </div>
                 <div class="pb-5 justify-content-end d-flex">
                     <button type="reset" class="btn btn-secondary mr-2">BATAL</button>
                     <button type="submit" class="btn btn-primary px-6 ">KIRIM</button>
