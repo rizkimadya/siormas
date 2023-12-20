@@ -10,7 +10,7 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div class="card-body pt-8 mb-0">
-            @if ($latestStatusSkt->status == 'Berhasil Verifikasi')
+            @if ($latestStatusSkt->status == 'Berhasil Kirim SKT')
                 <!--begin::Alert-->
                 <div style="background-color:#ECFDF5" class="alert border-primary d-flex align-items-center p-5 m-0">
                     <!--begin::Wrapper-->
@@ -24,6 +24,20 @@
                     </div>
                     <a href="{{ asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
                         class="btn btn-primary font-weight-bold px-4 py-2">Preview</a>
+                    <!--end::Wrapper-->
+                </div>
+            @elseif($latestStatusSkt->status == 'Berhasil Verifikasi')
+                <div style="background-color:#E8e7ff" class="alert border-info d-flex align-items-center p-5 mt-4">
+                    <!--begin::Wrapper-->
+                    <div class="d-flex flex-column mr-auto">
+                        <!--begin::Title-->
+                        <h6 class="font-weight-bolder text-info pb-1">Menunggu Antrian</h6>
+                        <!--end::Title-->
+                        <!--begin::Content-->
+                        <span class="text-info">Permohonan Dana Anda telah berhasil diverifikasi, silahkan
+                            menunggu antrian</span>
+                        <!--end::Content-->
+                    </div>
                     <!--end::Wrapper-->
                 </div>
             @elseif($latestStatusSkt->status == 'Menunggu Verifikasi')

@@ -17,10 +17,10 @@
                         <th>No</th>
                         <th>Nama Organisasi</th>
                         <th>No Telp</th>
-                        <th>Bidang Kegiatan</th>
                         <th>Alamat</th>
                         <th>Kelurahan</th>
                         <th>Kecamatan</th>
+                        <th>status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -30,10 +30,24 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->ormas->nama_organisasi }}</td>
                             <td>{{ $item->no_telp }}</td>
-                            <td>{{ $item->bidang_kegiatan }}</td>
                             <td>{{ $item->alamat_sekretariat }}</td>
                             <td id="kelurahanName">{{ $item->kelurahan }}</td>
                             <td id="kecamatanName">{{ $item->kecamatan }}</td>
+                            <td>
+                                <div class="d-flex mt-2">
+                                    @if ($item->status == 'Berhasil Kirim SKT')
+                                        <p class="text-primary"
+                                            style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
+                                            SKT Aktif
+                                        </p>
+                                    @else
+                                        <p class="text-warning"
+                                            style="background-color: #fbfbee; padding:6px 10px; border-radius:6px;">
+                                            Menunggu SKT
+                                        </p>
+                                    @endif
+                                </div>
+                            </td>
                             <td>
                                 <div class="d-flex gap-2">
                                     <a class="btn btn-bg-light"

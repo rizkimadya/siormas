@@ -32,7 +32,21 @@
                             <td>Rp.
                                 {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
                             <td>{{ $item->tujuan_permohonan }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td>
+                                <div class="d-flex mt-2">
+                                    @if ($item->status == 'Berhasil Kirim SP2P')
+                                        <p class="text-primary"
+                                            style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
+                                            Terima SP2P
+                                        </p>
+                                    @else
+                                        <p class="text-warning"
+                                            style="background-color: #fbfbee; padding:6px 10px; border-radius:6px;">
+                                            Menunggu SP2P
+                                        </p>
+                                    @endif
+                                </div>
+                            </td>
                             <td>
                                 <div class="d-flex gap-2">
                                     <a class="btn btn-bg-light"

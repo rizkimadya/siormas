@@ -1,6 +1,12 @@
 @extends('components.index', ['title' => 'Permohonan Dana'])
 @section('content')
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        @php
+            $user = auth()->user();
+            $dataPermohonanDana = \App\Models\PermohonanDana::where('ormas_id', $user->id)
+                ->latest()
+                ->first();
+        @endphp
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-12 subheader-transparent" id="kt_subheader">
             <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -38,68 +44,78 @@
                     </div>
                     <!--end::Heading-->
                 </div>
+                @if ($dataPermohonanDana != null)
+                    <div class="ms-auto">
+                        <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
+                            class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
+                            Permohonan</a>
+                    </div>
+                @endif
                 <!--end::Info-->
             </div>
         </div>
         <!--end::Subheader-->
-        <div class="d-flex flex-column-fluid">
-            <!--begin::Container-->
-            <div class="container">
-                <!--begin::Dashboard-->
-                <!--begin::Row-->
-                <div class="card card-custom gutter-b">
-                    <div class="card-body mx-4 my-4">
-                        <!--begin::Top-->
-                        <div class="pt-15 pt-md-10 pb-10 px-5 text-center">
-                            <!--begin::Icon-->
-                            <div class="d-flex flex-center mb-10">
-                                <span class="svg-icon svg-icon-5x svg-icon-primary">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Flower3.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24" />
-                                            <path
-                                                d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z"
-                                                fill="#000000" opacity="0.3"
-                                                transform="translate(11.500000, 12.000000) rotate(-345.000000) translate(-11.500000, -12.000000) " />
-                                            <path
-                                                d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z M11.5,14 C12.6045695,14 13.5,13.1045695 13.5,12 C13.5,10.8954305 12.6045695,10 11.5,10 C10.3954305,10 9.5,10.8954305 9.5,12 C9.5,13.1045695 10.3954305,14 11.5,14 Z"
-                                                fill="#000000" />
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </div>
-                            <!--end::Icon-->
-                            <!--begin::Content-->
-                            @if ($permohonanDana->isempty())
-                                <h4 class="font-size-h4 mb-10">Belum Ada Permohonan Dana</h4>
-                            @endif
-                            @php
-                                $user = auth()->user();
-                                $latestSkt = \App\Models\SKT::where('ormas_id', $user->id)
-                                    ->latest()
-                                    ->first();
-                            @endphp
-                            <div class="mt-7">
-                                @if ($latestSkt && $latestSkt->status == 'Berhasil Verifikasi')
-                                    <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
-                                        class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
-                                        Permohonan</a>
-                                @else
-                                    <h4 class="font-size-h4 mb-10">SKT Belum di Verifikasi</h4>
+
+        @if ($dataPermohonanDana == null)
+            <div class="d-flex flex-column-fluid">
+                <!--begin::Container-->
+                <div class="container">
+                    <!--begin::Dashboard-->
+                    <!--begin::Row-->
+                    <div class="card card-custom gutter-b">
+                        <div class="card-body mx-4 my-4">
+                            <!--begin::Top-->
+                            <div class="pt-15 pt-md-10 pb-10 px-5 text-center">
+                                <!--begin::Icon-->
+                                <div class="d-flex flex-center mb-10">
+                                    <span class="svg-icon svg-icon-5x svg-icon-primary">
+                                        <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Flower3.svg-->
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24" />
+                                                <path
+                                                    d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z"
+                                                    fill="#000000" opacity="0.3"
+                                                    transform="translate(11.500000, 12.000000) rotate(-345.000000) translate(-11.500000, -12.000000) " />
+                                                <path
+                                                    d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z M11.5,14 C12.6045695,14 13.5,13.1045695 13.5,12 C13.5,10.8954305 12.6045695,10 11.5,10 C10.3954305,10 9.5,10.8954305 9.5,12 C9.5,13.1045695 10.3954305,14 11.5,14 Z"
+                                                    fill="#000000" />
+                                            </g>
+                                        </svg>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                </div>
+                                <!--end::Icon-->
+                                <!--begin::Content-->
+                                @if ($permohonanDana->isempty())
+                                    <h4 class="font-size-h4 mb-10">Belum Ada Permohonan Dana</h4>
                                 @endif
+                                @php
+                                    $user = auth()->user();
+                                    $latestSkt = \App\Models\SKT::where('ormas_id', $user->id)
+                                        ->latest()
+                                        ->first();
+                                @endphp
+                                <div class="mt-7">
+                                    @if ($latestSkt && $latestSkt->status == 'Berhasil Kirim SKT')
+                                        <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
+                                            class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
+                                            Permohonan</a>
+                                    @else
+                                        <h4 class="font-size-h4 mb-10">SKT Belum di Verifikasi</h4>
+                                    @endif
+                                </div>
+                                <!--end::Icon-->
                             </div>
-                            <!--end::Icon-->
+                            <!--end::Top-->
                         </div>
-                        <!--end::Top-->
                     </div>
+                    <!--end::Row-->
                 </div>
-                <!--end::Row-->
+                <!--end::Container-->
             </div>
-            <!--end::Container-->
-        </div>
+        @endif
 
         <div class="d-flex flex-column-fluid">
             <!--begin::Container-->
@@ -174,14 +190,23 @@
                                             </span>
                                     </div>
                                 </div>
-                                @if ($item->status == 'Menunggu Verifikasi')
-                                    <span style="background-color:#FFF9E2"
-                                        class="label text-warning label-xl label-inline">Menunggu Verifikasi</span>
+                                @if ($item->status == 'Berhasil Kirim SP2P')
+                                    <span style="background-color:#ECFDF5"
+                                        class="label text-primary label-xl label-inline">Berhasil Verifikasi</span>
+                                @elseif($item->status == 'Berhasil Verifikasi')
+                                    <div>
+                                        <span style="background-color:#E8e7ff"
+                                            class="label text-info label-xl label-inline">Menunggu Antrian</span>
+                                    </div>
+                                @elseif($item->status == 'Menunggu Verifikasi')
+                                    <div>
+                                        <span style="background-color:#FFF9E2"
+                                            class="label text-warning label-xl label-inline">Menunggu Verifikasi</span>
+                                    </div>
                                 @else
                                     <div>
-                                        <span style="background-color:#ECFDF5"
-                                            class="label text-primary label-xl label-inline">Berhasil Verifikasi</span>
-                                        <span class="form-text text-muted">Silahkan menunggu konfirmasi</span>
+                                        <span style="background-color:#F6EBEB"
+                                            class="label text-danger label-xl label-inline">Permohonan Ditolak</span>
                                     </div>
                                 @endif
                                 <!--end: Item-->

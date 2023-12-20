@@ -27,6 +27,23 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{ asset('assets/media/logos/logokesbangpol.png') }}" />
+    <style>
+        .dataTables_wrapper .dataTable th.sorting_asc:before {
+            display: none;
+        }
+
+        .dataTables_wrapper .dataTable th.sorting_asc:after {
+            display: none;
+        }
+
+        .dataTables_wrapper .dataTable th.sorting:before {
+            display: none;
+        }
+
+        .dataTables_wrapper .dataTable th.sorting:after {
+            display: none;
+        }
+    </style>
 </head>
 <!--end::Head-->
 <!--begin::Body-->

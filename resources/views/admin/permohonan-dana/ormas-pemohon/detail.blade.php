@@ -47,19 +47,39 @@
                                             <h6 class="font-weight-bolder">{{ $ormasPemohon->ormas->nama_organisasi }}</h6>
                                         </div>
                                         <div class="d-flex flex-column flex-root">
-                                            <h7 class="opacity-70 mb-3">Periode</h7>
-                                            <h6 class="font-weight-bolder">{{ $ormasPemohon->periode }}</h6>
+                                            <h7 class="opacity-70 mb-3">Status Permohonan Dana</h7>
+                                            <div class="d-flex">
+                                                @if ($ormasPemohon->status == 'Berhasil Kirim SP2P')
+                                                    <h6 class="font-weight-bolder text-primary"
+                                                        style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
+                                                        Terima SP2P
+                                                    </h6>
+                                                @else
+                                                    <h6 class="font-weight-bolder text-warning"
+                                                        style="background-color: #fbfbee; padding:6px 10px; border-radius:6px;">
+                                                        Menunggu SP2P
+                                                    </h6>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="text-right">
                                     <div class="d-flex justify-content-between pt-6">
                                         <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Periode</h7>
+                                            <h6 class="font-weight-bolder">{{ $ormasPemohon->periode }}</h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root">
                                             <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
                                             <h6 class="font-weight-bolder">
                                                 Rp. {{ number_format($ormasPemohon->jumlah_anggaran, 0, ',', '.') }}
                                             </h6>
                                         </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-flex justify-content-between pt-6">
                                         <div class="d-flex flex-column flex-root">
                                             <h7 class="opacity-70 mb-3">Tujuan Permohonan Dana</h7>
                                             <h6 class="font-weight-bolder">

@@ -85,7 +85,7 @@
                                         <!--begin::Desc-->
                                     <p class="text-dark-50 font-weight-normal font-size-lg ">Total Permohonan SKT
                                         <!-- <br />We help to strengthen your brand
-                                                                                     <br />for your every purpose.</p> -->
+                                                                                                 <br />for your every purpose.</p> -->
                                         <!--end::Desc-->
                                 </div>
                                 <!--begin::Team-->
@@ -144,7 +144,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <!--begin::List Widget 10-->
-                        <div class="card card-custom card-stretch gutter-b">
+                        <div class="card card-custom card-stretch gutter-b" style="height: 60vh;">
                             <!--begin::Header-->
                             <div class="card-header border-0">
                                 <h3 class="card-title font-weight-bolder text-dark">Rekap Layanan</h3>
@@ -154,8 +154,8 @@
                             </div>
                             <!--end::Header-->
                             <!--begin::Body-->
-                            <div class="card-body pt-0">
-                                <canvas id="chartRekapLayanan"></canvas>
+                            <div class="card-body mx-auto pt-0">
+                                <canvas style="width: 100%;" id="chartRekapLayanan"></canvas>
                             </div>
                             <!--end: Card Body-->
                         </div>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="col-lg-6">
                         <!--begin::List Widget 11-->
-                        <div class="card card-custom card-stretch gutter-b">
+                        <div class="card card-custom card-stretch gutter-b" style="height: 60vh;">
                             <!--begin::Header-->
                             <div class="card-header border-0">
                                 <h3 class="card-title font-weight-bolder text-dark">Total Ormas</h3>
@@ -172,7 +172,7 @@
                             <!--end::Header-->
                             <!--begin::Body-->
                             <div class="card-body pt-0">
-                                <canvas id="jumlahOrmas"></canvas>
+                                <canvas style="width: 100%;" id="jumlahOrmas"></canvas>
                             </div>
                             <!--end::Body-->
                         </div>

@@ -11,7 +11,7 @@
                     Detail Ormas
                 </h6>
             </div>
-            <div class="card-body border-0 d-flex justify-content-end">
+            {{-- <div class="card-body border-0 d-flex justify-content-end">
                 @if ($ormasTerdaftar->status == 'Berhasil Verifikasi')
                     <h6 class="font-weight-bolder m-0 py-1 text-primary"
                         style="background-color: #EEFBF0; padding:24px; border-radius:6px;">
@@ -29,7 +29,7 @@
 
                     </h6>
                 @endif
-            </div>
+            </div> --}}
         </div>
         <!--end::Header-->
         <!--begin::Body-->
@@ -63,6 +63,31 @@
                             <tr>
                                 <td class="text-right">
                                     <div class="d-flex justify-content-between">
+                                        <div class="d-flex flex-column flex-root pr-8">
+                                            <h7 class="opacity-70 mb-3">Nama Organisasi</h7>
+                                            <h6 class="font-weight-bolder">{{ $ormasTerdaftar->ormas->nama_organisasi }}
+                                            </h6>
+                                        </div>
+                                        <div class="d-flex flex-column flex-root pr-8">
+                                            <h7 class="opacity-70 mb-3">Status SKT</h7>
+                                            <div class="d-flex">
+                                                @if ($ormasTerdaftar->status == 'Berhasil Kirim SKT')
+                                                    <h6 class="font-weight-bolder text-primary"
+                                                        style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
+                                                        SKT Aktif
+                                                    </h6>
+                                                @else
+                                                    <h6 class="font-weight-bolder text-warning"
+                                                        style="background-color: #fbfbee; padding:6px 10px; border-radius:6px;">
+                                                        Menunggu SKT
+                                                    </h6>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="d-flex justify-content-between pt-6">
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Bidang Kegiatan</h7>
                                             <h6 class="font-weight-bolder">{{ $ormasTerdaftar->bidang_kegiatan }}</h6>
@@ -108,7 +133,8 @@
                                         </div>
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">No. SK Pengurus</h7>
-                                            <h6 class="font-weight-bolder">{{ $ormasTerdaftar->ormas->no_sk_pengurus }}</h6>
+                                            <h6 class="font-weight-bolder">{{ $ormasTerdaftar->ormas->no_sk_pengurus }}
+                                            </h6>
                                         </div>
                                     </div>
                                 </td>

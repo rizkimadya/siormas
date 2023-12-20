@@ -26,6 +26,7 @@ class AdminPermohonanDana extends Controller
         // Update data SP2P
         $sp2p->file_sp2p = $fileName;
         $sp2p->keterangan = $request->keterangan;
+        $sp2p->status = 'Berhasil Kirim SP2P';
         $sp2p->save();
 
         Alert::success('Sukses', 'Surat SP2P Berhasil Dikirim');
@@ -35,7 +36,7 @@ class AdminPermohonanDana extends Controller
 
     public function indexOrmasPemohon()
     {
-        $ormasPemohon = PermohonanDana::with('ormas')->latest()->get();
+        $ormasPemohon = PermohonanDana::with('ormas')->where('status', 'Berhasil Kirim SP2P')->orWhere('status', 'Berhasil Verifikasi')->latest()->get();
         return view('admin.permohonan-dana.ormas-pemohon.index', compact('ormasPemohon'));
     }
 

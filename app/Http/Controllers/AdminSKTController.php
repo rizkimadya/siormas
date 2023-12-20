@@ -26,6 +26,7 @@ class AdminSKTController extends Controller
         // Update data SP2P
         $skt->skt = $fileName;
         $skt->keterangan = $request->keterangan;
+        $skt->status = 'Berhasil Kirim SKT';
         $skt->save();
 
         Alert::success('Sukses', 'Surat SKT Berhasil Dikirim');
@@ -34,7 +35,7 @@ class AdminSKTController extends Controller
 
     public function indexOrmasTerdaftar()
     {
-        $ormasTerdaftar = SKT::with('ormas')->latest()->get();
+        $ormasTerdaftar = SKT::with('ormas')->where('status', 'Berhasil Kirim SKT')->orWhere('status', 'Berhasil Verifikasi')->latest()->get();
         return view('admin.permohonan-skt.ormas-terdaftar.index', compact('ormasTerdaftar'));
     }
 
