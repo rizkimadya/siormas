@@ -54,6 +54,71 @@
                         <!--begin::Form-->
                         <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
                             <div class="col-xl-12">
+                                <!--Revisi::Button kembali-->
+                                <div class="d-flex border-0 pb-6">
+                                    <a href="{{ url('/pelaporan-kegiatan/laporan-ormas') }}" class="card-icon pr-4 py-0">
+                                        <i class="flaticon2-left-arrow-1 text-dark"></i>
+                                    </a>
+                                    <h6 class="font-weight-bolder m-0 py-1">
+                                        Detail Permohonan
+                                    </h6>
+                                </div>
+                                <!--Revisi::Tambah Alert-->
+                                <!--begin::Alert-->
+                                <div style="background-color:#ECFDF5" class="alert border-primary d-flex align-items-center p-5 m-0">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-primary pb-1">Berhasil Mendapat Dana</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-primary">Permohonan Dana Anda telah berhasil</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    {{-- <a href="{{ asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
+                                        class="btn btn-primary font-weight-bold px-4 py-2">Preview</a> --}}
+                                    <a class="btn btn-primary font-weight-bold px-4 py-2">Preview</a>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <div style="background-color:#EAF8FE" class="alert border-blue d-flex align-items-center p-5 mt-4">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-blue pb-1">Menunggu Antrian</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-blue">Permohonan Dana Anda telah berhasil diverifikasi, silahkan menunggu antrian</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <div style="background-color:#FFF9E2" class="alert border-warning d-flex align-items-center p-5 mt-4">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-warning pb-1">Menunggu Verifikasi</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-warning">Permohonan Dana Anda masih dalam proses verifikasi oleh pihak Verifikator
+                                            Bankesbangpol</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <div style="background-color:#F6EBEB" class="alert border-danger d-flex align-items-center p-5 mt-4">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-danger pb-1">Verifikasi di Tolak</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-danger">Maaf Laporan Anda ditolak</span>
+                                        <span class="text-black">Keterangan: Pada lembar pengesahan tidak ada tanda tangan ketua</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Alert-->
                                 <div class="d-flex justify-content-between mb-5">
                                     <h4>Keterangan Permohonan Dana</h4>
                                     @if ($permohonanDana->file_sp2p != null)

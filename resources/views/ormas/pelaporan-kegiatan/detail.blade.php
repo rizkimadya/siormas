@@ -54,6 +54,54 @@
                         <!--begin::Form-->
                         <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
                             <div class="col-xl-12">
+                                <div class="d-flex border-0 pb-6">
+                                    <a href="{{ url('/pelaporan-kegiatan/laporan-ormas') }}" class="card-icon pr-4 py-0">
+                                        <i class="flaticon2-left-arrow-1 text-dark"></i>
+                                    </a>
+                                    <h6 class="font-weight-bolder m-0 py-1">
+                                        Detail Pelaporan
+                                    </h6>
+                                </div>
+                                <!--Revisi::Tambah Alert-->
+                                <!--begin::Alert-->
+                                <div style="background-color:#ECFDF5" class="alert border-primary d-flex align-items-center p-5 m-0">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-primary pb-1">Laporan Diterima</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-primary">Laporan Anda telah berhasil diterima</span>
+                                        <!--end::Content-->
+                                    </div>
+                                </div>
+                                <div style="background-color:#FFF9E2" class="alert border-warning d-flex align-items-center p-5 mt-4">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-warning pb-1">Menunggu Verifikasi Laporan</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-warning">Pelaporan kegiatan Anda masih dalam proses verifikasi oleh pihak Verifikator
+                                            Bankesbangpol</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <div style="background-color:#F6EBEB" class="alert border-danger d-flex align-items-center p-5 mt-4">
+                                    <!--begin::Wrapper-->
+                                    <div class="d-flex flex-column mr-auto">
+                                        <!--begin::Title-->
+                                        <h6 class="font-weight-bolder text-danger pb-1">Laporan Ditolak</h6>
+                                        <!--end::Title-->
+                                        <!--begin::Content-->
+                                        <span class="text-danger">Maaf Laporan Anda ditolak</span>
+                                        <span class="text-black">Keterangan: Pada lembar pengesahan tidak ada tanda tangan ketua</span>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--end::Alert-->
                                 <h4 class="mb-4">Keterangan Pelaporan Kegiatan</h4>
                                 <div class="row mb-4">
                                     <div class="col-md-6">
@@ -109,7 +157,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <h7 class="opacity-70 mb-3">Tujuan Permohonan</h7>
+                                            <h7 class="opacity-70 mb-3">Deskripsi Kegiatan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $pelaporanKegiatan->tujuan_permohonan }}</h6>
                                         </div>

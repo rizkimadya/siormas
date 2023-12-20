@@ -18,7 +18,7 @@
                         <th>Nama Organisasi</th>
                         <th>Jenis Kegiatan</th>
                         <th>Jumlah Anggaran</th>
-                        <th>Tujuan Permohonan</th>
+                        <th>Deskripsi Kegiatan</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>

@@ -141,7 +141,7 @@
                                         </div>
                                         <div class="row mt-0">
                                             <div class="form-group col-xl-6">
-                                                <label>Tujuan Permohonan</label>
+                                                <label>Deskripsi Kegiatan</label>
                                                 <div>
                                                     <textarea class="form-control" name="tujuan_permohonan" id="floatingTextarea"></textarea>
                                                 </div>
