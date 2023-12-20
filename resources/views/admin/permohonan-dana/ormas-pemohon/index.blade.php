@@ -18,7 +18,6 @@
                         <th>Nama Organisasi</th>
                         <th>Periode</th>
                         <th>Jumlah Anggaran</th>
-                        <th>Tujuan Permohonan</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -31,7 +30,6 @@
                             <td>{{ $item->periode }}</td>
                             <td>Rp.
                                 {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
-                            <td>{{ $item->tujuan_permohonan }}</td>
                             <td>
                                 <div class="d-flex mt-2">
                                     @if ($item->status == 'Berhasil Kirim SP2P')

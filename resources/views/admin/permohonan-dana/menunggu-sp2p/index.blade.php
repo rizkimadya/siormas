@@ -18,7 +18,6 @@
                         <th>Nama Organisasi</th>
                         <th>Periode</th>
                         <th>Jumlah Anggaran</th>
-                        <th>Tujuan Permohonan</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -30,7 +29,6 @@
                             <td>{{ $item->periode }}</td>
                             <td>Rp.
                                 {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
-                            <td>{{ $item->tujuan_permohonan }}</td>
                             <td>
                                 <a class="btn btn-bg-primary text-white"
                                     href="/permohonan-dana/menunggu/detail/{{ $item->id }}">Kirim SP2P</a>

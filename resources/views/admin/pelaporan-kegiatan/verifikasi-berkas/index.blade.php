@@ -18,8 +18,6 @@
                         <th>Nama Organisasi</th>
                         <th>Jenis Kegiatan</th>
                         <th>Jumlah Anggaran</th>
-                        <th>Tujuan Permohonan</th>
-                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -31,8 +29,6 @@
                             <td>{{ $item->jenis_kegiatan }}</td>
                             <td>Rp.
                                 {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
-                            <td>{{ $item->tujuan_permohonan }}</td>
-                            <td>{{ $item->status }}</td>
                             <td>
                                 <a class="btn btn-bg-primary text-white"
                                     href="/pelaporan-kegiatan/verifikasi/detail/{{ $item->id }}">Verifikasi</a>

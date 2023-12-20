@@ -9,7 +9,7 @@ class AdminPelaporanKegiatan extends Controller
 {
     public function indexOrmasPemohon()
     {
-        $laporanOrmas = PelaporanKegiatan::with('ormas')->latest()->get();
+        $laporanOrmas = PelaporanKegiatan::with('ormas')->where('status', 'Berhasil Verifikasi')->orWhere('status', 'Menunggu Verifikasi')->latest()->get();
         return view('admin.pelaporan-kegiatan.laporan-ormas.index', compact('laporanOrmas'));
     }
 

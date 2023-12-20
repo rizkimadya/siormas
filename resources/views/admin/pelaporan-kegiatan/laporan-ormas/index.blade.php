@@ -18,7 +18,6 @@
                         <th>Nama Organisasi</th>
                         <th>Jenis Kegiatan</th>
                         <th>Jumlah Anggaran</th>
-                        <th>Deskripsi Kegiatan</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -31,8 +30,21 @@
                             <td>{{ $item->jenis_kegiatan }}</td>
                             <td>Rp.
                                 {{ number_format($item->jumlah_anggaran, 0, ',', '.') }}</td>
-                            <td>{{ $item->tujuan_permohonan }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td>
+                                <div class="d-flex mt-2">
+                                    @if ($item->status == 'Berhasil Verifikasi')
+                                        <p class="text-primary"
+                                            style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
+                                            Berhasil Verifikasi
+                                        </p>
+                                    @else
+                                        <p class="text-warning"
+                                            style="background-color: #fbfbee; padding:6px 10px; border-radius:6px;">
+                                            Menunggu Verifikasi
+                                        </p>
+                                    @endif
+                                </div>
+                            </td>
                             <td>
                                 <div class="d-flex gap-2">
                                     <a class="btn btn-bg-light"
