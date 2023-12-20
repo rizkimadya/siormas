@@ -260,28 +260,25 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group col-xl-6">
-                                                        <label>Keluruhan <span class="text-danger">*</span></label>
-                                                        <div>
-                                                            <select name="kelurahan" required
-                                                                class="custom-select form-control form-control-lg">
-                                                                <option>Pilih</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-0">
-                                                    <div class="form-group col-xl-6">
                                                         <label>Kecamatan <span class="text-danger">*</span></label>
                                                         <div>
                                                             <select name="kecamatan" required
-                                                                class="custom-select form-control form-control-lg">
-                                                                <option>Pilih</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                class="custom-select form-control form-control-lg"
+                                                                id="kecamatanSelect" onchange="getKelurahan()">
+                                                                <option value="">Pilih Kecamatan</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-0">
+                                                    <div class="form-group col-xl-6">
+                                                        <label>Kelurahan <span class="text-danger">*</span></label>
+                                                        <div>
+                                                            <select name="kelurahan" required
+                                                                class="custom-select form-control form-control-lg"
+                                                                id="kelurahanSelect">
+                                                                <option value="">Pilih Kelurahan</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -604,4 +601,55 @@
         </div>
         <!--end::Entry-->
     </div>
+    <script>
+        const kecamatanSelect = document.getElementById('kecamatanSelect');
+        const kelurahanSelect = document.getElementById('kelurahanSelect');
+
+        // Event listener untuk pemilihan kecamatan
+        kecamatanSelect.addEventListener('change', getKelurahan);
+
+        function getKelurahan() {
+            const selectedKecamatanId = kecamatanSelect.value;
+
+            // Bersihkan opsi kelurahan yang sudah ada
+            kelurahanSelect.innerHTML = '<option value="">Pilih Kelurahan</option>';
+
+            // Jika kecamatan belum dipilih, hentikan eksekusi
+            if (!selectedKecamatanId) {
+                return;
+            }
+
+            // Ambil data kelurahan berdasarkan ID kecamatan
+            fetch(`https://www.emsifa.com/api-wilayah-indonesia/api/villages/${selectedKecamatanId}.json`)
+                .then(response => response.json())
+                .then(kelurahanData => {
+                    // Tambahkan opsi kelurahan dari data yang diambil
+                    kelurahanData.forEach(kelurahan => {
+                        const option = document.createElement('option');
+                        option.value = kelurahan.id;
+                        option.text = kelurahan.name;
+                        kelurahanSelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching kelurahan data:', error);
+                });
+        }
+
+        // Ambil data kecamatan saat halaman dimuat
+        fetch('https://www.emsifa.com/api-wilayah-indonesia/api/districts/7313.json')
+            .then(response => response.json())
+            .then(kecamatanData => {
+                // Tambahkan opsi kecamatan dari data yang diambil
+                kecamatanData.forEach(kecamatan => {
+                    const option = document.createElement('option');
+                    option.value = kecamatan.id;
+                    option.text = kecamatan.name;
+                    kecamatanSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching kecamatan data:', error);
+            });
+    </script>
 @endsection

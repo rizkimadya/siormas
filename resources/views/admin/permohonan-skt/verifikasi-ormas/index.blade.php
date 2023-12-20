@@ -32,8 +32,8 @@
                             <td>{{ $item->no_telp }}</td>
                             <td>{{ $item->bidang_kegiatan }}</td>
                             <td>{{ $item->alamat_sekretariat }}</td>
-                            <td>{{ $item->kelurahan }}</td>
-                            <td>{{ $item->kecamatan }}</td>
+                            <td id="kelurahanName">{{ $item->kelurahan }}</td>
+                            <td id="kecamatanName">{{ $item->kecamatan }}</td>
                             <td>
                                 <a class="btn btn-bg-primary text-white"
                                     href="/permohonan-skt/verifikasi/detail/{{ $item->id }}">Verifikasi</a>

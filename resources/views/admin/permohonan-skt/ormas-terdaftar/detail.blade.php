@@ -81,15 +81,18 @@
                                         </div>
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kelurahan</h7>
-                                            <h6 class="font-weight-bolder">{{ $ormasTerdaftar->kelurahan }}</h6>
+                                            <h6 class="font-weight-bolder" id="kelurahanName">
+                                                {{ $ormasTerdaftar->kelurahan }}</h6>
                                         </div>
+
                                     </div>
                                 </td>
                                 <td class="text-right">
                                     <div class="d-flex justify-content-between pt-6">
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kecamatan</h7>
-                                            <h6 class="font-weight-bolder"> {{ $ormasTerdaftar->kecamatan }}</h6>
+                                            <h6 class="font-weight-bolder" id="kecamatanName">
+                                                {{ $ormasTerdaftar->kecamatan }}</h6>
                                         </div>
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Tempat Pendirian</h7>
@@ -296,7 +299,8 @@
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
-                                    <a target="_blank" href='{{ asset('storage/sk_pengurus/' . $ormasTerdaftar->sk_pengurus) }}'
+                                    <a target="_blank"
+                                        href='{{ asset('storage/sk_pengurus/' . $ormasTerdaftar->sk_pengurus) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -310,7 +314,8 @@
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
-                                    <a target="_blank" href='{{ asset('storage/sk_domisili/' . $ormasTerdaftar->sk_domisili) }}'
+                                    <a target="_blank"
+                                        href='{{ asset('storage/sk_domisili/' . $ormasTerdaftar->sk_domisili) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -337,7 +342,8 @@
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
-                                    <a target="_blank" href='{{ asset('storage/foto_kantor/' . $ormasTerdaftar->foto_kantor) }}'
+                                    <a target="_blank"
+                                        href='{{ asset('storage/foto_kantor/' . $ormasTerdaftar->foto_kantor) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -349,7 +355,8 @@
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
-                                    <a target="_blank" href='{{ asset('storage/akta_notaris/' . $ormasTerdaftar->akta_notaris) }}'
+                                    <a target="_blank"
+                                        href='{{ asset('storage/akta_notaris/' . $ormasTerdaftar->akta_notaris) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -363,4 +370,5 @@
 
         <!--end::Body-->
     </div>
+    <!-- Skrip JavaScript -->
 @endsection
