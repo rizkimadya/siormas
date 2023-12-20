@@ -55,7 +55,7 @@
                         <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
                             <div class="col-xl-12">
                                 <div class="d-flex border-0 pb-6">
-                                    <a href="{{ url('/pelaporan-kegiatan/laporan-ormas') }}" class="card-icon pr-4 py-0">
+                                    <a href="{{ url('/pelaporan-kegiatan/index') }}" class="card-icon pr-4 py-0">
                                         <i class="flaticon2-left-arrow-1 text-dark"></i>
                                     </a>
                                     <h6 class="font-weight-bolder m-0 py-1">
@@ -129,14 +129,14 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <h7 class="opacity-70 mb-3">Kelurahan</h7>
-                                            <h6 class="font-weight-bolder">
+                                            <h6 class="font-weight-bolder" id="kelurahanName">
                                                 {{ $pelaporanKegiatan->kelurahan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <h7 class="opacity-70 mb-3">Kecamatan</h7>
-                                            <h6 class="font-weight-bolder">
+                                            <h6 class="font-weight-bolder" id="kecamatanName">
                                                 {{ $pelaporanKegiatan->kecamatan }}</h6>
                                         </div>
                                     </div>
@@ -228,11 +228,11 @@
                                         </div>
                                     @endif
                                 </div>
-                                <div class="d-flex justify-content-end border-top pt-10">
+                                {{-- <div class="d-flex justify-content-end border-top pt-10">
                                     <a href="{{ url('/pelaporan-kegiatan/index') }}"
                                         class="btn btn-primary font-weight-bold text-uppercase px-6 py-3">
                                         Kembali</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!--end::form-->

@@ -175,6 +175,65 @@
     <!--end::Main-->
     <!--end::Demo Panel-->
     <script>
+        // Fungsi untuk mendapatkan nama kecamatan berdasarkan ID
+        function getKecamatanName(kecamatanId) {
+            return fetch(`https://www.emsifa.com/api-wilayah-indonesia/api/districts/7313.json`)
+                .then(response => response.json())
+                .then(data => {
+                    const kecamatan = data.find(item => item.id === kecamatanId);
+                    return kecamatan ? kecamatan.name : null;
+                })
+                .catch(error => {
+                    console.error('Error fetching kecamatan data:', error);
+                    return null;
+                });
+        }
+
+        // Fungsi untuk mendapatkan nama kelurahan berdasarkan ID
+        function getKelurahanName(selectedKecamatanId, kelurahanId) {
+            return fetch(`https://www.emsifa.com/api-wilayah-indonesia/api/villages/${selectedKecamatanId}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    const kelurahan = data.find(item => item.id === kelurahanId);
+                    return kelurahan ? kelurahan.name : null;
+                })
+                .catch(error => {
+                    console.error('Error fetching kelurahan data:', error);
+                    return null;
+                });
+        }
+
+        // Mendapatkan elemen HTML dengan ID kecamatanName dan kelurahanName
+        const kecamatanElement = document.getElementById('kecamatanName');
+        const kelurahanElement = document.getElementById('kelurahanName');
+
+        // Mendapatkan ID kecamatan dan kelurahan dari elemen HTML
+        const kecamatanId = kecamatanElement.textContent
+            .trim(); // Mungkin perlu penyesuaian tergantung pada markup HTML yang sebenarnya
+        const kelurahanId = kelurahanElement.textContent
+            .trim(); // Mungkin perlu penyesuaian tergantung pada markup HTML yang sebenarnya
+
+        // Mendapatkan dan menampilkan nama kecamatan
+        getKecamatanName(kecamatanId)
+            .then(kecamatanName => {
+                if (kecamatanName) {
+                    kecamatanElement.textContent = kecamatanName;
+                } else {
+                    console.log('Kecamatan tidak ditemukan.');
+                }
+            });
+
+        // Mendapatkan dan menampilkan nama kelurahan
+        getKelurahanName(kecamatanId, kelurahanId)
+            .then(kelurahanName => {
+                if (kelurahanName) {
+                    kelurahanElement.textContent = kelurahanName;
+                } else {
+                    console.log('Kelurahan tidak ditemukan.');
+                }
+            });
+    </script>
+    <script>
         var HOST_URL = "https://keenthemes.com/metronic/tools/preview";
     </script>
     <!--begin::Global Config(global config for global JS scripts)-->

@@ -72,11 +72,13 @@
                                     <div class="d-flex justify-content-between pt-6">
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kelurahan</h7>
-                                            <h6 class="font-weight-bolder"> {{ $laporanOrmas->kelurahan }}</h6>
+                                            <h6 class="font-weight-bolder" id="kelurahanName">
+                                                {{ $laporanOrmas->kelurahan }}</h6>
                                         </div>
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kecamatan</h7>
-                                            <h6 class="font-weight-bolder">{{ $laporanOrmas->kecamatan }}</h6>
+                                            <h6 class="font-weight-bolder" id="kecamatanName">{{ $laporanOrmas->kecamatan }}
+                                            </h6>
                                         </div>
                                     </div>
                                 </td>
