@@ -124,7 +124,8 @@
                                             class="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4">{{ auth()->user()->username }}</span>
                                         <span class="symbol symbol-35">
                                             <span
-                                                class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">A</span>
+                                                class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">{{ strtoupper(substr(auth()->user()->nama_organisasi, 0, 1)) }}
+                                            </span>
                                         </span>
                                     </div>
                                 </div>
@@ -135,8 +136,10 @@
                                     <!--begin::Header-->
                                     <div class="d-flex align-items-center p-8 rounded-top">
                                         <!--begin::Symbol-->
-                                        <div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-                                            <img src="{{ asset('assets/media/users/300_21.jpg') }}" alt="" />
+                                        <div class="symbol symbol-md mr-3 flex-shrink-0" style="background-color: #87C027;">
+                                            <span
+                                                class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">{{ strtoupper(substr(auth()->user()->nama_organisasi, 0, 1)) }}
+                                            </span>
                                         </div>
                                         <!--end::Symbol-->
                                         <!--begin::Text-->
