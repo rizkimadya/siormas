@@ -41,7 +41,7 @@ class AdminPelaporanKegiatan extends Controller
         $verifikasi->status = 'Berkas Ditolak';
         $verifikasi->keterangan = $request->keterangan;
         $verifikasi->save();
-        Alert::success('Sukses', 'Verifikasi Ditolak');
+        Alert::success('Sukses', 'Laporan Ditolak');
         return redirect('/pelaporan-kegiatan/verifikasi');
     }
 
@@ -52,7 +52,7 @@ class AdminPelaporanKegiatan extends Controller
         // Update status menjadi "Diterima"
         $verifikasi->status = 'Berhasil Verifikasi';
         $verifikasi->save();
-        Alert::success('Sukses', 'Berhasil Verifikasi');
+        Alert::success('Sukses', 'Laporan Diterima');
         return redirect('/pelaporan-kegiatan/verifikasi');
     }
 

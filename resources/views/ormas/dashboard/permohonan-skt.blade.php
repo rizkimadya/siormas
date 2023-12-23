@@ -573,12 +573,12 @@
                                             <div class="d-flex justify-content-between border-top mt-5 pt-10">
                                                 <div class="mr-2">
                                                     <button type="button"
-                                                        class="btn btn-light-primary font-weight-bold text-uppercase px-9 py-4"
+                                                        class="btn btn-light font-weight-bold text-uppercase px-9 py-4"
                                                         data-wizard-type="action-prev">Sebelumnya</button>
                                                 </div>
                                                 <div>
                                                     <button type="submit"
-                                                        class="btn btn-success font-weight-bold text-uppercase px-9 py-4"
+                                                        class="btn btn-primary font-weight-bold text-uppercase px-9 py-4"
                                                         data-wizard-type="action-submit">Submit</button>
                                                     <button type="button"
                                                         class="btn btn-primary font-weight-bold text-uppercase px-9 py-4"

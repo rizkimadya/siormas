@@ -69,6 +69,8 @@
 
                                         <br />lakukan permohonan SKT.
                                     </div>
+                                    <a href="{{ url('/dashboard-ormas/permohonan-skt') }}" style="background-color:#87C027"
+                                    class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Buat Permohonan</a>
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Content-->

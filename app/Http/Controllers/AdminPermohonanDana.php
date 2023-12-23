@@ -29,7 +29,7 @@ class AdminPermohonanDana extends Controller
         $sp2p->status = 'Berhasil Kirim SP2P';
         $sp2p->save();
 
-        Alert::success('Sukses', 'Surat SP2P Berhasil Dikirim');
+        Alert::success('Sukses', 'Surat Tanda Terima Dana Berhasil Dikirim');
         return redirect('/permohonan-dana/menunggu');
     }
 

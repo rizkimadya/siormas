@@ -16,7 +16,7 @@
                     <!--begin::Wrapper-->
                     <div class="d-flex flex-column mr-auto">
                         <!--begin::Title-->
-                        <h6 class="font-weight-bolder text-primary pb-1">Berhasil Verifikasi Berkas</h6>
+                        <h6 class="font-weight-bolder text-primary pb-1">SKT Aktif</h6>
                         <!--end::Title-->
                         <!--begin::Content-->
                         <span class="text-primary">Permohonan SKT Anda telah berhasil, silahkan lakukan preview </span>
@@ -31,11 +31,11 @@
                     <!--begin::Wrapper-->
                     <div class="d-flex flex-column mr-auto">
                         <!--begin::Title-->
-                        <h6 class="font-weight-bolder text-info pb-1">Menunggu Antrian</h6>
+                        <h6 class="font-weight-bolder text-info pb-1">Menunggu SKT</h6>
                         <!--end::Title-->
                         <!--begin::Content-->
-                        <span class="text-info">Permohonan Dana Anda telah berhasil diverifikasi, silahkan
-                            menunggu antrian</span>
+                        <span class="text-info">Permohonan SKT Anda telah berhasil diverifikasi, silahkan
+                            menunggu SKT untuk dikirimkan</span>
                         <!--end::Content-->
                     </div>
                     <!--end::Wrapper-->

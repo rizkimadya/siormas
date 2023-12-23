@@ -141,7 +141,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #1d5cff;
+    color: #007A39;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -2049,7 +2049,7 @@ pre {
   .form-control::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:-moz-focusring {
+  .form-control:-moz-focusring { 
     color: transparent;
     text-shadow: 0 0 0 #3F4254; }
   .form-control:focus {
@@ -2497,12 +2497,12 @@ fieldset:disabled a.btn {
   box-shadow: none; }
   .btn-primary:hover {
     color: #ffffff;
-    background-color: #036e34;
-    border-color: #366eff; }
+    background-color: #007A39;
+    border-color: #007A39; }
   .btn-primary:focus, .btn-primary.focus {
     color: #ffffff;
-    background-color: #036e34;
-    border-color: #366eff;
+    background-color: #007A39;
+    border-color: #007A39;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(128, 163, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(128, 163, 255, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {

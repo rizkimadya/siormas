@@ -29,7 +29,7 @@ class AdminSKTController extends Controller
         $skt->status = 'Berhasil Kirim SKT';
         $skt->save();
 
-        Alert::success('Sukses', 'Surat SKT Berhasil Dikirim');
+        Alert::success('Sukses', 'Dokumen SKT Berhasil Dikirim');
         return redirect('/permohonan-skt/menunggu');
     }
 
