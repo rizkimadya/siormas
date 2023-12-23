@@ -45,7 +45,7 @@
 
                     <a href="{{ $skt ? url('/dashboard-ormas/status-skt') : url('/dashboard-ormas') }}"
                         class="menu-link">
-                        <span class="menu-text">Dashboard Ormas</span>
+                        <span class="menu-text">Dashboard</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>

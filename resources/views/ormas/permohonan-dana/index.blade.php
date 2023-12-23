@@ -100,7 +100,7 @@
                                 <!--end::Icon-->
                                 <!--begin::Content-->
                                 @if ($permohonanDana->isempty())
-                                    <h4 class="font-size-h4 mb-10">Belum Ada Permohonan Dana</h4>
+                                    <h4 class="font-size-h4 font-weight-bolder mb-0">Belum Ada Permohonan Dana</h4>
                                 @endif
                                 @php
                                     $user = auth()->user();
@@ -114,7 +114,8 @@
                                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                                             Permohonan</a>
                                     @else
-                                        <h4 class="font-size-h4 mb-10">Permohonan Dana dapat dilakukan jika anda telah memiliki SKT</h4>
+                                        <h4 class="font-size-h6 text-muted mb-10">Permohonan Dana dapat dilakukan jika anda telah memiliki SKT</h4>
+                                        <a href="javascript:;" class="btn btn-outline-primary font-weight-bold ml-2" id="kt_login_signup">Lihat Syarat</a>
                                     @endif
                                 </div>
                                 <!--end::Icon-->
