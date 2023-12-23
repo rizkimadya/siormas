@@ -49,17 +49,18 @@
                         <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                             Permohonan</a>
-                        <a href="{{ url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
-                        class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
+                        <button  data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
+                            class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd ">
-                                    <rect x="0" y="0" width="24" height="24"/>
-                                    <circle fill="#ffffff" opacity="0.3" cx="12" cy="12" r="10"/>
-                                    <rect fill="#ffffff" x="11" y="10" width="2" height="7" rx="1"/>
-                                    <rect fill="#fefefe" x="11" y="7" width="2" height="2" rx="1"/>
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <circle fill="#ffffff" opacity="0.3" cx="12" cy="12" r="10" />
+                                    <rect fill="#ffffff" x="11" y="10" width="2" height="7" rx="1" />
+                                    <rect fill="#fefefe" x="11" y="7" width="2" height="2" rx="1" />
                                 </g>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 @endif
                 <!--end::Info-->
@@ -114,8 +115,10 @@
                                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                                             Permohonan</a>
                                     @else
-                                        <h4 class="font-size-h6 text-muted mb-10">Permohonan Dana dapat dilakukan jika anda telah memiliki SKT</h4>
-                                        <a href="javascript:;" class="btn btn-outline-primary font-weight-bold ml-2" id="kt_login_signup">Lihat Syarat</a>
+                                        <h4 class="font-size-h6 text-muted mb-10">Permohonan Dana dapat dilakukan jika anda
+                                            telah memiliki SKT</h4>
+                                        <button data-toggle="modal" data-target="#exampleModalCenter"
+                                            class="btn btn-outline-primary font-weight-bold ml-2">Lihat Syarat</button>
                                     @endif
                                 </div>
                                 <!--end::Icon-->
@@ -128,6 +131,23 @@
                 <!--end::Container-->
             </div>
         @endif
+
+        <div class="modal fade" id="exampleModalCenter" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdrop" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Persyaratan Permohonan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i aria-hidden="true" class="ki ki-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Isi List Persyaratan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="d-flex flex-column-fluid">
             <!--begin::Container-->
