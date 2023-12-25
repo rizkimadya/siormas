@@ -171,7 +171,7 @@
                                     <div class="navi navi-spacer-x-0 pt-5">
                                         <div class="navi-footer px-8 py-5">
                                             <a href="{{ url('/logout') }}"
-                                                class="btn btn-light-primary font-weight-bold">Sign Out</a>
+                                                class="btn btn-outline-primary font-weight-bold">Logout</a>
                                             <!-- <a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean font-weight-bold">Upgrade Plan</a> -->
                                         </div>
                                         <!--end::Footer-->
