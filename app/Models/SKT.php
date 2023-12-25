@@ -34,7 +34,6 @@ class SKT extends Model
         'masa_bhakti',
         'keputusan_tertinggi',
         'bentuk_organisasi',
-        'status_kepengurusan',
         'usaha_organisasi',
         'sumber_keuangan',
 
@@ -45,7 +44,7 @@ class SKT extends Model
         'sk_pengurus',
         'sk_domisili',
         'surat_pernyataan',
-        'foto_kantor',
+        'biodata_pengurus',
         'akta_notaris',
 
     ];

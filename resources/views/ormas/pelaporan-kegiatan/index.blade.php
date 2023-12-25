@@ -5,7 +5,8 @@
             $user = auth()->user();
             $dataPelaporanKegiatan = \App\Models\PelaporanKegiatan::where('ormas_id', $user->id)
                 ->latest()
-                ->first();
+                ->first()
+                ->get();
         @endphp
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-12 subheader-transparent" id="kt_subheader">
@@ -140,6 +141,7 @@
                     <div class="modal-body">
                         <p>1. Laporan Kegiatan<a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
                         <p>2. Foto Kegiatan sebanyak 2</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -248,7 +250,8 @@
                                 </div>
                                 @if ($item->status == 'Berhasil Verifikasi')
                                     <span style="background-color:#ECFDF5; margin-left:auto; display:flex;"
-                                        class="label text-primary label-xl label-inline">Verifikasi Laporan Berhasil</span>
+                                        class="label text-primary label-xl label-inline">Verifikasi Laporan
+                                        Berhasil</span>
                                 @elseif($item->status == 'Menunggu Verifikasi')
                                     <span style="background-color:#FFF9E2; margin-left:auto; display:flex;"
                                         class="label text-warning label-xl label-inline">Menunggu Verifikasi</span>
@@ -265,6 +268,4 @@
             </div>
             <!--end::Container-->
         </div>
-
-    </div>
-@endsection
+    @endsection

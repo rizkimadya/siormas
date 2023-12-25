@@ -85,7 +85,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/foto_kantor/'.$dokumen->foto_kantor) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ asset('storage/biodata_pengurus/'.$dokumen->biodata_pengurus) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 			<div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">

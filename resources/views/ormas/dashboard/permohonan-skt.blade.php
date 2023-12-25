@@ -523,8 +523,8 @@
                                                         <label>Biodata Pengurus <span
                                                                 class="text-danger">*</span></label>
                                                         <div class="custom-file">
-                                                            <input name="foto_kantor" required type="file"
-                                                                accept="image/png, image/jpeg, image/jpg"
+                                                            <input name="biodata_pengurus" required type="file"
+                                                                accept=".pdf"
                                                                 class="custom-file-input" id="customFile" />
                                                             <label class="custom-file-label" for="customFile">Pilih
                                                                 File</label>

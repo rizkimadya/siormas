@@ -74,7 +74,6 @@ class SKTController extends Controller
                 'masa_bhakti' => 'required',
                 'keputusan_tertinggi' => 'required',
                 'bentuk_organisasi' => 'required',
-                'status_kepengurusan' => 'required',
                 'usaha_organisasi' => 'nullable',
                 'sumber_keuangan' => 'nullable',
 
@@ -85,7 +84,7 @@ class SKTController extends Controller
                 'sk_pengurus'   => 'required|mimes:pdf|max:500000',
                 'sk_domisili'   => 'required|mimes:pdf|max:500000',
                 'surat_pernyataan'   => 'required|mimes:pdf|max:500000',
-                'foto_kantor' => 'required|image|mimes:jpeg,png,jpg|max:5000',
+                'biodata_pengurus'   => 'required|mimes:pdf|max:500000',
                 'akta_notaris'   => 'required|mimes:pdf|max:500000',
             ]);
 
@@ -119,10 +118,10 @@ class SKTController extends Controller
             $surat_pernyataan = time() . "_" . $file6->getClientOriginalName();
             $file6->storeAs('public/surat_pernyataan', $surat_pernyataan);
 
-            // foto_kantor
-            $file7 = $request->file('foto_kantor');
-            $foto_kantor = time() . "_" . $file7->getClientOriginalName();
-            $file7->storeAs('public/foto_kantor', $foto_kantor);
+            // biodata_pengurus
+            $file7 = $request->file('biodata_pengurus');
+            $biodata_pengurus = time() . "_" . $file7->getClientOriginalName();
+            $file7->storeAs('public/biodata_pengurus', $biodata_pengurus);
 
             // akta_notaris
             $file8 = $request->file('akta_notaris');
@@ -155,7 +154,6 @@ class SKTController extends Controller
                 "masa_bhakti" => $request->masa_bhakti,
                 "keputusan_tertinggi" => $request->keputusan_tertinggi,
                 "bentuk_organisasi" => $request->bentuk_organisasi,
-                "status_kepengurusan" => $request->status_kepengurusan,
                 "usaha_organisasi" => $request->usaha_organisasi,
                 "sumber_keuangan" => $request->sumber_keuangan,
 
@@ -165,7 +163,7 @@ class SKTController extends Controller
                 'sk_pengurus'   => $sk_pengurus,
                 'sk_domisili'   => $sk_domisili,
                 'surat_pernyataan'   => $surat_pengantar,
-                'foto_kantor' => $foto_kantor,
+                'biodata_pengurus' => $biodata_pengurus,
                 'akta_notaris'   => $akta_notaris,
             ]);
 

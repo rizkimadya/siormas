@@ -363,13 +363,13 @@
                                 <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
                                     <!--begin::Title-->
                                     <div class="d-flex flex-column flex-grow-1 mr-2">
-                                        <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Foto
-                                            Kantor/Sekretariat</span>
+                                        <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Biodata
+                                            Pengurus</span>
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/foto_kantor/' . $ormasTerdaftar->foto_kantor) }}'
+                                        href='{{ asset('storage/biodata_pengurus/' . $ormasTerdaftar->biodata_pengurus) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>

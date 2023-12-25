@@ -41,7 +41,6 @@ return new class extends Migration
             $table->string('masa_bhakti');
             $table->string('keputusan_tertinggi');
             $table->string('bentuk_organisasi');
-            $table->string('status_kepengurusan');
             $table->string('usaha_organisasi')->nullable();
             $table->string('sumber_keuangan')->nullable();
 
@@ -52,7 +51,7 @@ return new class extends Migration
             $table->string('sk_pengurus');
             $table->string('sk_domisili');
             $table->string('surat_pernyataan');
-            $table->string('foto_kantor');
+            $table->string('biodata_pengurus');
             $table->string('akta_notaris');
 
             $table->timestamps();
