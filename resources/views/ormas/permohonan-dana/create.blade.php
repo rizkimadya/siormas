@@ -89,6 +89,25 @@
                                                     {{-- <span class="form-text text-muted">Lokasi organisasi didirikan contoh: Kota Makassar</span> --}}
                                                 </div>
                                             </div>
+                                            <div class="form-group col-xl-6">
+                                                <label>Nomor Rekening</label>
+                                                <div>
+                                                    <input class="form-control" name="no_rek" type="number"
+                                                        placeholder="Masukkan Nomor Rekening" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-xl-6">
+                                                <label>FC Buku Rekening <span class="text-danger">*</span></label>
+                                                <div class="custom-file">
+                                                    <input name="fc_burek" required type="file"
+                                                        accept="image/png, image/jpeg, image/jpg" class="custom-file-input"
+                                                        id="customFile" />
+                                                    <label class="custom-file-label" for="customFile">Pilih File</label>
+                                                    <span class="form-text text-black">File dalam bentuk: Jpg, png, jpeg
+                                                        Max. file
+                                                        size: 5 MB</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="row mt-0">
                                             <div class="form-group col-xl-6">
@@ -129,8 +148,8 @@
                                             <div class="form-group col-xl-6">
                                                 <label>Fotocopy KTP Sekertaris <span class="text-danger">*</span></label>
                                                 <div class="custom-file">
-                                                    <input name="fc_ktp_sekertaris" required type="file" accept=".pdf"
-                                                        class="custom-file-input" id="customFile" />
+                                                    <input name="fc_ktp_sekertaris" required type="file"
+                                                        accept=".pdf" class="custom-file-input" id="customFile" />
                                                     <label class="custom-file-label" for="customFile">Pilih File</label>
                                                     <span class="form-text text-black">File dalam bentuk: pdf Max. file
                                                         size: 500 MB</span>

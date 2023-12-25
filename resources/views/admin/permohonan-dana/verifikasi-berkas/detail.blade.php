@@ -3,9 +3,11 @@
     <div class="card card-custom">
         <!--begin::Header-->
         <div class="card-body d-flex border-0">
-            <span class="card-icon pr-4 py-0">
-                <i class="flaticon2-left-arrow-1 text-dark"></i>
-            </span>
+            <a href="{{ url('/permohonan-dana/verifikasi') }}">
+                <span class="card-icon pr-4 py-0">
+                    <i class="flaticon2-left-arrow-1 text-dark"></i>
+                </span>
+            </a>
             <h6 class="font-weight-bolder m-0 py-1">
                 Detail Verifikasi
             </h6>
@@ -39,6 +41,16 @@
                                 </h6>
                             </div>
                             <div class="d-flex flex-column flex-root">
+                                <h7 class="opacity-70 mb-3">Nomor Rekening</h7>
+                                <h6 class="font-weight-bolder">
+                                    {{ $verifikasi->no_rek }}
+                                </h6>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="d-flex justify-content-between pt-6">
+                            <div class="d-flex flex-column flex-root">
                                 <h7 class="opacity-70 mb-3">Tujuan Permohonan Dana</h7>
                                 <h6 class="font-weight-bolder">
                                     {{ $verifikasi->tujuan_permohonan }}
@@ -55,6 +67,20 @@
                 <h5 class="font-weight-bolder text-primary m-0">Dokumen Pemohon</h5>
             </div>
             <div class="row mt-5">
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
+                        <!--begin::Title-->
+                        <div class="d-flex flex-column flex-grow-1 mr-2">
+                            <span class="font-weight-bold text-dark-75 font-size-lg mb-1">FC
+                                Buku Rekening</span>
+                        </div>
+                        <!--end::Title-->
+                        <!--begin::Buttonpreview-->
+                        <a target="_blank" href="{{ asset('storage/bukuRekening/' . $verifikasi->fc_burek) }}"
+                            class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                        <!--end::Buttonpreview-->
+                    </div>
+                </div>
                 <div class="col-md-6 mb-3">
                     <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
                         <!--begin::Title-->
@@ -105,7 +131,8 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href="{{ asset('storage/fc_ktp_sekertaris/' . $verifikasi->fc_ktp_sekertaris) }}"
+                        <a target="_blank"
+                            href="{{ asset('storage/fc_ktp_sekertaris/' . $verifikasi->fc_ktp_sekertaris) }}"
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>

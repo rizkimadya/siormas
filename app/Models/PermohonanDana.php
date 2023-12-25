@@ -19,6 +19,8 @@ class PermohonanDana extends Model
         "periode",
         "jumlah_anggaran",
         "tujuan_permohonan",
+        "no_rek",
+        "fc_burek",
         "surat_permohonan",
         "proposal",
         "fc_ktp_ketua",

@@ -86,6 +86,12 @@
                                                 {{ $ormasPemohon->tujuan_permohonan }}
                                             </h6>
                                         </div>
+                                        <div class="d-flex flex-column flex-root">
+                                            <h7 class="opacity-70 mb-3">Nomor Rekening</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $ormasPemohon->no_rek }}
+                                            </h6>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -166,6 +172,21 @@
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
                                         href="{{ asset('storage/fc_ktp_sekertaris/' . $ormasPemohon->fc_ktp_sekertaris) }}"
+                                        class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                    <!--end::Buttonpreview-->
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
+                                    <!--begin::Title-->
+                                    <div class="d-flex flex-column flex-grow-1 mr-2">
+                                        <span class="font-weight-bold text-dark-75 font-size-lg mb-1">FC
+                                            Buku Rekening</span>
+                                    </div>
+                                    <!--end::Title-->
+                                    <!--begin::Buttonpreview-->
+                                    <a target="_blank"
+                                        href="{{ asset('storage/bukuRekening/' . $ormasPemohon->fc_burek) }}"
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>

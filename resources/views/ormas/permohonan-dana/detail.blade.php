@@ -153,16 +153,38 @@
                                                 {{ number_format($permohonanDana->jumlah_anggaran, 0, ',', '.') }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-12 pt-6">
+                                    <div class="col-md-6 pt-6">
                                         <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Tujuan Permohonan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $permohonanDana->tujuan_permohonan }}</h6>
                                         </div>
                                     </div>
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
+                                            <h7 class="opacity-70 mb-3">Nomor Rekening</h7>
+                                            <h6 class="font-weight-bolder">
+                                                {{ $permohonanDana->no_rek }}</h6>
+                                        </div>
+                                    </div>
                                 </div>
                                 <h4 class="mb-4">File Permohonan</h4>
                                 <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
+                                            <!--begin::Title-->
+                                            <div class="d-flex flex-column flex-grow-1 mr-2">
+                                                <span class="font-weight-bold text-dark-75 font-size-lg mb-1">FC
+                                                    Buku Rekening</span>
+                                            </div>
+                                            <!--end::Title-->
+                                            <!--begin::Buttonpreview-->
+                                            <a target="_blank"
+                                                href="{{ asset('storage/bukuRekening/' . $permohonanDana->fc_burek) }}"
+                                                class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+                                            <!--end::Buttonpreview-->
+                                        </div>
+                                    </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded mr-7">
                                             <!--begin::Title-->

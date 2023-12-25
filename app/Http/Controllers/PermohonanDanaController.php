@@ -27,11 +27,18 @@ class PermohonanDanaController extends Controller
             'ormas_id' => 'required',
             'jumlah_anggaran' => 'required',
             'tujuan_permohonan' => 'nullable',
+            'no_rek' => 'required',
+            'fc_burek'   => 'required|image|mimes:jpeg,png,jpg|max:5000',
             'surat_permohonan'   => 'required|mimes:pdf|max:500000',
             'proposal'   => 'required|mimes:pdf|max:500000',
             'fc_ktp_ketua'   => 'required|mimes:pdf|max:500000',
             'fc_ktp_sekertaris'   => 'required|mimes:pdf|max:500000',
         ]);
+        // fc burek
+        $file = $request->file('fc_burek');
+        $fc_burek = time() . "_" . $file->getClientOriginalName();
+        $file->storeAs('public/bukuRekening', $fc_burek);
+
         // surat permohonan
         $file1 = $request->file('surat_permohonan');
         $surat_permohonan = time() . "_" . $file1->getClientOriginalName();
@@ -58,6 +65,8 @@ class PermohonanDanaController extends Controller
             "periode" => date('Y'),
             "jumlah_anggaran" => $request->jumlah_anggaran,
             "tujuan_permohonan" => $request->tujuan_permohonan,
+            "no_rek" => $request->no_rek,
+            "fc_burek" => $fc_burek,
             "surat_permohonan" => $surat_permohonan,
             "proposal" => $proposal,
             "fc_ktp_ketua" => $fc_ktp_ketua,
