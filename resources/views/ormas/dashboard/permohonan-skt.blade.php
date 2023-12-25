@@ -405,24 +405,10 @@
                                                                 <option value="1">Unit</option>
                                                                 <option value="2">Satuan</option>
                                                                 <option value="3">Sayap</option>
+                                                                <option value="4">Otonom Daerah</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="form-group col-xl-6">
-                                                        <label>Status Kepengurusan <span
-                                                                class="text-danger">*</span></label>
-                                                        <div>
-                                                            <select name="status_kepengurusan" required
-                                                                class="custom-select form-control form-control-lg">
-                                                                <option>Pilih</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-0">
                                                     <div class="form-group col-xl-6">
                                                         <label>Usaha Organisasi</label>
                                                         <div>
@@ -430,6 +416,8 @@
                                                                 class="form-control form-control-xl" type="text" />
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="row mt-0">
                                                     <div class="form-group col-xl-6">
                                                         <label>Sumber Keuangan</label>
                                                         <div>
@@ -532,7 +520,7 @@
                                                 </div>
                                                 <div class="row mt-0">
                                                     <div class="form-group col-xl-6">
-                                                        <label>Foto Kantor/Sekretariat <span
+                                                        <label>Biodata Pengurus <span
                                                                 class="text-danger">*</span></label>
                                                         <div class="custom-file">
                                                             <input name="foto_kantor" required type="file"
@@ -540,9 +528,9 @@
                                                                 class="custom-file-input" id="customFile" />
                                                             <label class="custom-file-label" for="customFile">Pilih
                                                                 File</label>
-                                                            <span class="form-text text-muted">File dalam bentuk: jpeg,
-                                                                png,
-                                                                jpg, Max. file size: 5 MB</span>
+                                                            <span class="form-text text-muted">File dalam bentuk: pdf Max.
+                                                                file
+                                                                size: 500 MB</span>
                                                         </div>
                                                     </div>
                                                     <div class="form-group col-xl-6">

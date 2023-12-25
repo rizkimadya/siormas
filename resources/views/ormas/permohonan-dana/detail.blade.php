@@ -140,21 +140,21 @@
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col-md-6">
-                                        <div class="mb-3">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Periode</h7>
                                             <h6 class="font-weight-bolder">Tahun
                                                 {{ $permohonanDana->periode }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="mb-3">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
                                             <h6 class="font-weight-bolder">Rp
                                                 {{ number_format($permohonanDana->jumlah_anggaran, 0, ',', '.') }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="mb-3">
+                                    <div class="col-12 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Tujuan Permohonan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $permohonanDana->tujuan_permohonan }}</h6>
@@ -198,7 +198,7 @@
                                             <!--begin::Title-->
                                             <div class="d-flex flex-column flex-grow-1 mr-2">
                                                 <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Fotocopy
-                                                    KTP Ketua</span>
+                                                    KTP Ketua/Pimpinan dan Sekertaris</span>
                                             </div>
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
@@ -212,8 +212,7 @@
                                         <div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
                                             <!--begin::Title-->
                                             <div class="d-flex flex-column flex-grow-1 mr-2">
-                                                <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Fotocopy
-                                                    KTP Sekertaris</span>
+                                                <span class="font-weight-bold text-dark-75 font-size-lg mb-1">Surat Keterangan Domisili</span>
                                             </div>
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->

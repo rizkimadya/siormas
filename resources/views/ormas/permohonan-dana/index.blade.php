@@ -143,7 +143,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Isi List Persyaratan</p>
+                        <p>1. Surat Permohonan tertulis kepada Bupati Kab. Wajo <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                        <p>2. Proposal <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                        <p>3. Fotocopy KTP Ketua/Pimpinan dan Sekertaris</p>
+                        <p>4. Surat Keterangan Domisili dari Lurah/Kepala Desa mengetahui Camat setempat</p>
+                        <p>5. Fotocopy Buku Rekening</p>
                     </div>
                 </div>
             </div>

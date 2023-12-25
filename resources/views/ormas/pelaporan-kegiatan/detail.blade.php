@@ -115,58 +115,58 @@
                                 <h4 class="mt-8">Keterangan Pelaporan Kegiatan</h4>
                                 <div class="row mb-4">
                                     <div class="col-md-6">
-                                        <div class="mb-3">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Jenis Kegiatan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $pelaporanKegiatan->jenis_kegiatan }}</h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="mb-3">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Waktu Pelaksanaan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ \Carbon\Carbon::parse($pelaporanKegiatan->waktu_pelaksanaan)->format('d F Y') }}
                                             </h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Lokasi Pelaksanaan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $pelaporanKegiatan->lokasi_pelaksanaan }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kelurahan</h7>
                                             <h6 class="font-weight-bolder" id="kelurahanName">
                                                 {{ $pelaporanKegiatan->kelurahan }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Kecamatan</h7>
                                             <h6 class="font-weight-bolder" id="kecamatanName">
                                                 {{ $pelaporanKegiatan->kecamatan }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Nama Penanggung Jawab/Ketua Panitia </h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $pelaporanKegiatan->ketupat }}</h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Jumlah Anggaran</h7>
                                             <h6 class="font-weight-bolder"> Rp.
                                                 {{ number_format($pelaporanKegiatan->jumlah_anggaran, 0, ',', '.') }}
                                             </h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
+                                    <div class="col-md-6 pt-6">
+                                        <div class="d-flex flex-column flex-root pr-8">
                                             <h7 class="opacity-70 mb-3">Deskripsi Kegiatan</h7>
                                             <h6 class="font-weight-bolder">
                                                 {{ $pelaporanKegiatan->tujuan_permohonan }}</h6>

@@ -138,8 +138,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Isi List Persyaratan</p>
-                    </div>
+                        <p>1. Laporan Kegiatan<a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                        <p>2. Foto Kegiatan sebanyak 2</p>
                 </div>
             </div>
         </div>
