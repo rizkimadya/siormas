@@ -69,7 +69,7 @@
                         ->latest()
                         ->first();
                 @endphp
-                @if ($dataPermohonanDana == null && $dataSkt->status == 'Berhasil Kirim SKT')
+                @if ($dataSkt != null && $dataPermohonanDana == null && $dataSkt->status == 'Berhasil Kirim SKT')
                     <div class="ms-auto">
                         <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">

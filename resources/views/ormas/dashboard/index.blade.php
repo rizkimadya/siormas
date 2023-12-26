@@ -138,4 +138,5 @@
             </div>
             <!--end::Entry-->
         </div>
+    </div>
     @endsection
