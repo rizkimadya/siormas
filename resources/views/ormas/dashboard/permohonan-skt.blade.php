@@ -520,12 +520,11 @@
                                                 </div>
                                                 <div class="row mt-0">
                                                     <div class="form-group col-xl-6">
-                                                        <label>Biodata Pengurus <span
-                                                                class="text-danger">*</span></label>
+                                                        <label>Biodata Pengurus <span class="text-danger">*</span></label>
                                                         <div class="custom-file">
                                                             <input name="biodata_pengurus" required type="file"
-                                                                accept=".pdf"
-                                                                class="custom-file-input" id="customFile" />
+                                                                accept=".pdf" class="custom-file-input"
+                                                                id="customFile" />
                                                             <label class="custom-file-label" for="customFile">Pilih
                                                                 File</label>
                                                             <span class="form-text text-muted">File dalam bentuk: pdf Max.
@@ -613,10 +612,13 @@
                 .then(kelurahanData => {
                     // Tambahkan opsi kelurahan dari data yang diambil
                     kelurahanData.forEach(kelurahan => {
-                        const option = document.createElement('option');
-                        option.value = kelurahan.id;
-                        option.text = kelurahan.name;
-                        kelurahanSelect.appendChild(option);
+                        // Hanya tambahkan opsi jika belum ada
+                        if (!kelurahanSelect.querySelector(`option[value="${kelurahan.id}"]`)) {
+                            const option = document.createElement('option');
+                            option.value = kelurahan.id;
+                            option.text = kelurahan.name;
+                            kelurahanSelect.appendChild(option);
+                        }
                     });
                 })
                 .catch(error => {
