@@ -43,14 +43,35 @@
                         <!--end::Breadcrumb-->
                     </div>
                     <!--end::Heading-->
-                </div
-               
+                </div>
                 @if ($dataPermohonanDana != null)
                     <div class="ms-auto">
                         <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                             Permohonan</a>
-                        <button  data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
+                        <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
+                            class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd ">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <circle fill="#ffffff" opacity="0.3" cx="12" cy="12" r="10" />
+                                    <rect fill="#ffffff" x="11" y="10" width="2" height="7" rx="1" />
+                                    <rect fill="#fefefe" x="11" y="7" width="2" height="2" rx="1" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                @endif
+                @php
+                    $user = auth()->user();
+                    $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
+                        ->latest()
+                        ->first();
+                @endphp
+                @if ($dataPermohonanDana == null && $dataSkt->status == 'Berhasil Kirim SKT')
+                    <div class="ms-auto">
+                        <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
@@ -65,28 +86,6 @@
                     </div>
                 @endif
                 <!--end::Info-->
-                @php
-                $user = auth()->user();
-                $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
-                    ->latest()
-                    ->first();
-            @endphp
-            @if ($dataSkt->status == "Berhasil Kirim SKT")
-                <div class="ms-auto">
-            <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
-                class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd ">
-                        <rect x="0" y="0" width="24" height="24" />
-                        <circle fill="#ffffff" opacity="0.3" cx="12" cy="12" r="10" />
-                        <rect fill="#ffffff" x="11" y="10" width="2" height="7" rx="1" />
-                        <rect fill="#fefefe" x="11" y="7" width="2" height="2" rx="1" />
-                    </g>
-                </svg>
-            </button>
-        </div>
-        @endif
             </div>
         </div>
         <!--end::Subheader-->
@@ -166,8 +165,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>1. Surat Permohonan tertulis kepada Bupati Kab. Wajo <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
-                        <p>2. Proposal <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                        <p>1. Surat Permohonan tertulis kepada Bupati Kab. Wajo <a href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing" target="_blank"
+                                class="font-weight-bold">(Download)</a> </p>
+                        <p>2. Proposal <a href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing" target="_blank" class="font-weight-bold">(Download)</a> </p>
                         <p>3. Fotocopy KTP Ketua/Pimpinan dan Sekertaris</p>
                         <p>4. Surat Keterangan Domisili dari Lurah/Kepala Desa mengetahui Camat setempat</p>
                         <p>5. Fotocopy Buku Rekening</p>

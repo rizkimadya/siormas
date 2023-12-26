@@ -109,12 +109,19 @@
                                             </div>
                                             <div class="modal-body">
                                                 <p>1. Logo Organisasi</p>
-                                                <p>2. Surat Pengantar ditujukan Kepala Badan Kesbang dan Politik Kab. Wajo <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                                                <p>2. Surat Pengantar ditujukan Kepala Badan Kesbang dan Politik Kab. Wajo
+                                                    <a href="https://drive.google.com/drive/folders/12TPMNoQaOCQja_oEDH4ppzon2q13tbok?usp=sharing"
+                                                        target="_blank" class="font-weight-bold">(Download)</a> </p>
                                                 <p>3. SK Kementrian Hukum dan Ham</p>
                                                 <p>4. SK Pengurus</p>
-                                                <p>5. Surat Keterangan Domisili dari Lurah/Kepala Desa mengetahui Camat setempat</p>
-                                                <p>6. Surat Pernyataan <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
-                                                <p>7. Biodata Pengurus <a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                                                <p>5. Surat Keterangan Domisili dari Lurah/Kepala Desa mengetahui Camat
+                                                    setempat</p>
+                                                <p>6. Surat Pernyataan <a
+                                                        href="https://drive.google.com/drive/folders/12TPMNoQaOCQja_oEDH4ppzon2q13tbok?usp=sharing"
+                                                        target="_blank" class="font-weight-bold">(Download)</a> </p>
+                                                <p>7. Biodata Pengurus <a
+                                                        href="https://drive.google.com/drive/folders/12TPMNoQaOCQja_oEDH4ppzon2q13tbok?usp=sharing"
+                                                        target="_blank" class="font-weight-bold">(Download)</a> </p>
                                                 <p>8. Akta Notaris dan NPWP</p>
                                             </div>
                                         </div>
