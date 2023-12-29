@@ -273,8 +273,7 @@
                                 </div>
                                 @if ($item->status == 'Berhasil Verifikasi')
                                     <span style="background-color:#ECFDF5; margin-left:auto; display:flex;"
-                                        class="label text-primary label-xl label-inline">Verifikasi Laporan
-                                        Berhasil</span>
+                                        class="label text-primary label-xl label-inline">Laporan Diterima</span>
                                 @elseif($item->status == 'Menunggu Verifikasi')
                                     <span style="background-color:#FFF9E2; margin-left:auto; display:flex;"
                                         class="label text-warning label-xl label-inline">Menunggu Verifikasi</span>

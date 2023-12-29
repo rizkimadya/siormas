@@ -7,7 +7,7 @@
                 <i class="flaticon2-left-arrow-1 text-dark"></i>
             </a>
             <h6 class="font-weight-bolder m-0 py-1">
-                Kirim SP2P
+                Kirim Tanda Terima Dana
             </h6>
         </div>
         <!--end::Header-->
@@ -22,7 +22,7 @@
                     <input class="form-control" disabled="disabled" value="{{ $menunggu->ormas->nama_organisasi }}" />
                 </div>
                 <div class="form-group">
-                    <label>File SP2P</label>
+                    <label>File Tanda Terima Dana</label>
                     <div></div>
                     <div class="custom-file">
                         <input type="file" name="file_sp2p" class="custom-file-input" accept=".pdf" required

@@ -35,7 +35,7 @@
                                     @if ($item->status == 'Berhasil Verifikasi')
                                         <p class="text-primary"
                                             style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
-                                            Berhasil Verifikasi
+                                            Laporan Diterima
                                         </p>
                                     @else
                                         <p class="text-warning"

@@ -134,7 +134,7 @@
                                                     <!--end::Svg Icon-->
                                                 </span>
                                             </span>
-                                            <span class="navi-text font-size-lg">Menunggu SP2P</span>
+                                            <span class="navi-text font-size-lg">Menunggu T2D</span>
                                         </a>
                                     </div>
                                 </div>
