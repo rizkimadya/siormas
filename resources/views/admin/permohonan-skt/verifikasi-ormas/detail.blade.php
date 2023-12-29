@@ -126,29 +126,33 @@
                     <td class="text-right">
                         <div class="d-flex justify-content-between pt-6">
                             <div class="d-flex flex-column flex-root">
+                                <h7 class="opacity-70 mb-3">Nama Bendahara</h7>
+                                <h6 class="font-weight-bolder">{{ $verifikasi->nama_bendahara }}</h6>
+                            </div>
+                            <div class="d-flex flex-column flex-root">
                                 <h7 class="opacity-70 mb-3">Masa Bhakti Kepengurusan</h7>
                                 <h6 class="font-weight-bolder">{{ $verifikasi->masa_bhakti }}</h6>
                             </div>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="d-flex justify-content-between pt-6">
                             <div class="d-flex flex-column flex-root">
                                 <h7 class="opacity-70 mb-3">Keputusan Tertinggi Organisasi</h7>
                                 <h6 class="font-weight-bolder">{{ $verifikasi->keputusan_tertinggi }}</h6>
                             </div>
+                            <div class="d-flex flex-column flex-root">
+                                <h7 class="opacity-70 mb-3">Tingkatan Organisasi</h7>
+                                <h6 class="font-weight-bolder">{{ $verifikasi->bentuk_organisasi }}</h6>
+                            </div>
                         </div>
                     </td>
                     <td class="text-right">
                         <div class="d-flex justify-content-between pt-6">
-                            <div class="d-flex flex-column flex-root">
-                                <h7 class="opacity-70 mb-3">Unit/Satuan/Sayap/Otonom Daerah</h7>
-                                <h6 class="font-weight-bolder">{{ $verifikasi->bentuk_organisasi }}</h6>
-                            </div>
                             <div class="d-flex flex-column flex-root">
                                 <h7 class="opacity-70 mb-3">Usaha Organisasi</h7>
                                 <h6 class="font-weight-bolder">{{ $verifikasi->usaha_organisasi }}</h6>
                             </div>
-                        </div>
-                    </td>
-                    <td class="text-right">
-                        <div class="d-flex justify-content-between pt-6">
                             <div class="d-flex flex-column flex-root">
                                 <h7 class="opacity-70 mb-3">Sumber Keuangan</h7>
                                 <h6 class="font-weight-bolder">{{ $verifikasi->sumber_keuangan }}</h6>

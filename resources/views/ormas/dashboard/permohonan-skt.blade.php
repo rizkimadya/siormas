@@ -397,15 +397,16 @@
                                                 </div>
                                                 <div class="row mt-0">
                                                     <div class="form-group col-xl-6">
-                                                        <label>Bentuk Organisasi <span class="text-danger">*</span></label>
+                                                        <label>Tingkatan Organisasi <span
+                                                                class="text-danger">*</span></label>
                                                         <div>
                                                             <select name="bentuk_organisasi" required
                                                                 class="custom-select form-control form-control-lg">
                                                                 <option>Pilih</option>
-                                                                <option value="1">Unit</option>
-                                                                <option value="2">Satuan</option>
-                                                                <option value="3">Sayap</option>
-                                                                <option value="4">Otonom Daerah</option>
+                                                                <option value="Unit">Unit</option>
+                                                                <option value="Satuan">Satuan</option>
+                                                                <option value="Sayap">Sayap</option>
+                                                                <option value="Otonom Daerah">Otonom Daerah</option>
                                                             </select>
                                                         </div>
                                                     </div>
