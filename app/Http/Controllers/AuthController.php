@@ -29,7 +29,7 @@ class AuthController extends Controller
 
             if ($user->roles == 'admin') {
                 Alert::success('Berhasil Login', 'Selamat Datang Admin');
-                return redirect('/');
+                return redirect()->intended('/');
             } elseif ($user->roles == 'ormas') {
                 Alert::success('Berhasil Login', 'Selamat Datang ' . $user->username);
                 $skt = SKT::where('ormas_id', $user->id)->first();
