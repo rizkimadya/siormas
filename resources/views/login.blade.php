@@ -92,7 +92,7 @@
                             @endforeach
                         @endif
                         <div id="kt_login_signin_form">
-                            <form action="{{ url('/login') }}" method="POST" class="form">
+                            <form action="{{ secure_url('/login') }}" method="POST" class="form">
                                 @csrf
                                 <div class="form-group">
                                     <input class="form-control form-control-solid h-auto py-5 px-6" type="text"
