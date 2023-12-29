@@ -132,7 +132,7 @@
                                         </span>
                                     </div>
 
-                                    <p class="text-dark font-weight-bolder font-size-h2">{{ $totalPermohonanDana }}
+                                    <p class="text-dark font-weight-bolder font-size-h2">{{ $totalPelaporanKegiatan }}
                                     <p class="text-dark-50 font-weight-normal font-size-lg ">Total Pelaporan Kegiatan
                                 </div>
                             </div>
