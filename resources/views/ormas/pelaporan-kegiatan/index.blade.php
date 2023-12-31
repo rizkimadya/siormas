@@ -41,7 +41,7 @@
                 </div>
                 @if ($dataPelaporanKegiatan != null)
                     <div class="ms-auto">
-                        <a href="{{ url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
+                        <a href="{{ secure_url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                             Pelaporan</a>
                         <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
@@ -128,7 +128,7 @@
 
                                 <div class="mt-7">
                                     @if ($latestSkt && $latestSkt->status == 'Berhasil Kirim SKT')
-                                        <a href="{{ url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
+                                        <a href="{{ secure_url('/pelaporan-kegiatan/create') }}" style="background-color:#87C027"
                                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                                             Pelaporan</a>
                                     @else

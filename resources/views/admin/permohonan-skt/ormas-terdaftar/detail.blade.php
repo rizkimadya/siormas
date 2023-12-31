@@ -4,7 +4,7 @@
         <!--begin::Header-->
         <div class="d-flex justify-content-between">
             <div class="card-body d-flex border-0">
-                <a href="{{ url('permohonan-skt/ormas-terdaftar') }}" class="card-icon pr-4 py-0">
+                <a href="{{ secure_url('permohonan-skt/ormas-terdaftar') }}" class="card-icon pr-4 py-0">
                     <i class="flaticon2-left-arrow-1 text-dark"></i>
                 </a>
                 <h6 class="font-weight-bolder m-0 py-1">
@@ -290,7 +290,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/logo_organisasi/' . $ormasTerdaftar->logo_organisasi) }}'
+                                        href='{{ secure_asset('storage/logo_organisasi/' . $ormasTerdaftar->logo_organisasi) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -303,7 +303,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/surat_pengantar/' . $ormasTerdaftar->surat_pengantar) }}'
+                                        href='{{ secure_asset('storage/surat_pengantar/' . $ormasTerdaftar->surat_pengantar) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -318,7 +318,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/sk_kemenkum_ham/' . $ormasTerdaftar->sk_kemenkum_ham) }}'
+                                        href='{{ secure_asset('storage/sk_kemenkum_ham/' . $ormasTerdaftar->sk_kemenkum_ham) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -330,7 +330,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/sk_pengurus/' . $ormasTerdaftar->sk_pengurus) }}'
+                                        href='{{ secure_asset('storage/sk_pengurus/' . $ormasTerdaftar->sk_pengurus) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -345,7 +345,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/sk_domisili/' . $ormasTerdaftar->sk_domisili) }}'
+                                        href='{{ secure_asset('storage/sk_domisili/' . $ormasTerdaftar->sk_domisili) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -358,7 +358,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/surat_pernyataan/' . $ormasTerdaftar->surat_pernyataan) }}'
+                                        href='{{ secure_asset('storage/surat_pernyataan/' . $ormasTerdaftar->surat_pernyataan) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -373,7 +373,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/biodata_pengurus/' . $ormasTerdaftar->biodata_pengurus) }}'
+                                        href='{{ secure_asset('storage/biodata_pengurus/' . $ormasTerdaftar->biodata_pengurus) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>
@@ -386,7 +386,7 @@
                                     <!--end::Title-->
                                     <!--begin::Buttonpreview-->
                                     <a target="_blank"
-                                        href='{{ asset('storage/akta_notaris/' . $ormasTerdaftar->akta_notaris) }}'
+                                        href='{{ secure_asset('storage/akta_notaris/' . $ormasTerdaftar->akta_notaris) }}'
                                         class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                     <!--end::Buttonpreview-->
                                 </div>

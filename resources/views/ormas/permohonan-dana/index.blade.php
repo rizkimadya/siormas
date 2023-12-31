@@ -32,7 +32,7 @@
                             <!--end::Item-->
                             <!--begin::Item-->
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
-                            <a href="{{ url('/permohonan-dana/index') }}"
+                            <a href="{{ secure_url('/permohonan-dana/index') }}"
                                 class="text-white text-hover-white opacity-75 hover-opacity-100">Permohonan Dana</a>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -47,7 +47,7 @@
 
                 @if ($dataPermohonanDana != null)
                     <div class="ms-auto">
-                        <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
+                        <a href="{{ secure_url('/permohonan-dana/create') }}" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                             Permohonan</a>
                         <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
@@ -134,7 +134,7 @@
                                 @endphp
                                 <div class="mt-7">
                                     @if ($latestSkt && $latestSkt->status == 'Berhasil Kirim SKT')
-                                        <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
+                                        <a href="{{ secure_url('/permohonan-dana/create') }}" style="background-color:#87C027"
                                             class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Tambah
                                             Permohonan</a>
                                     @else

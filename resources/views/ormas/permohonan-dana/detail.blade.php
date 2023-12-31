@@ -26,7 +26,7 @@
                             <!--end::Item-->
                             <!--begin::Item-->
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
-                            <a href="{{ url('permohonan-dana/index') }}"
+                            <a href="{{ secure_url('permohonan-dana/index') }}"
                                 class="text-white text-hover-white opacity-75 hover-opacity-100">Permohonan
                                 Dana</a>
                             <!--end::Item-->
@@ -56,7 +56,7 @@
                             <div class="col-xl-12">
                                 <!--Revisi::Button kembali-->
                                 <div class="d-flex border-0 pb-6">
-                                    <a href="{{ url('/permohonan-dana/index') }}" class="card-icon pr-4 py-0">
+                                    <a href="{{ secure_url('/permohonan-dana/index') }}" class="card-icon pr-4 py-0">
                                         <i class="flaticon2-left-arrow-1 text-dark"></i>
                                     </a>
                                     <h6 class="font-weight-bolder m-0 py-1">
@@ -77,10 +77,10 @@
                                             <span class="text-primary">Permohonan Dana Anda telah berhasil</span>
                                             <!--end::Content-->
                                         </div>
-                                        {{-- <a href="{{ asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
+                                        {{-- <a href="{{ secure_asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
                                         class="btn btn-primary font-weight-bold px-4 py-2">Preview</a> --}}
                                         <a class="btn btn-primary font-weight-bold px-4 py-2"
-                                            href="{{ asset('storage/sp2p/' . $permohonanDana->file_sp2p) }}"
+                                            href="{{ secure_asset('storage/sp2p/' . $permohonanDana->file_sp2p) }}"
                                             target="_blank">Preview</a>
                                         <!--end::Wrapper-->
                                     </div>
@@ -180,7 +180,7 @@
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
                                             <a target="_blank"
-                                                href="{{ asset('storage/bukuRekening/' . $permohonanDana->fc_burek) }}"
+                                                href="{{ secure_asset('storage/bukuRekening/' . $permohonanDana->fc_burek) }}"
                                                 class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                             <!--end::Buttonpreview-->
                                         </div>
@@ -195,7 +195,7 @@
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
                                             <a target="_blank"
-                                                href="{{ asset('storage/suratPermohonan/' . $permohonanDana->surat_permohonan) }}"
+                                                href="{{ secure_asset('storage/suratPermohonan/' . $permohonanDana->surat_permohonan) }}"
                                                 class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                             <!--end::Buttonpreview-->
                                         </div>
@@ -210,7 +210,7 @@
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
                                             <a target="_blank"
-                                                href="{{ asset('storage/proposal/' . $permohonanDana->proposal) }}"
+                                                href="{{ secure_asset('storage/proposal/' . $permohonanDana->proposal) }}"
                                                 class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                             <!--end::Buttonpreview-->
                                         </div>
@@ -225,7 +225,7 @@
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
                                             <a target="_blank"
-                                                href="{{ asset('storage/fc_ktp_ketua/' . $permohonanDana->fc_ktp_ketua) }}"
+                                                href="{{ secure_asset('storage/fc_ktp_ketua/' . $permohonanDana->fc_ktp_ketua) }}"
                                                 class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                             <!--end::Buttonpreview-->
                                         </div>
@@ -239,14 +239,14 @@
                                             <!--end::Title-->
                                             <!--begin::Buttonpreview-->
                                             <a target="_blank"
-                                                href="{{ asset('storage/fc_ktp_sekertaris/' . $permohonanDana->fc_ktp_sekertaris) }}"
+                                                href="{{ secure_asset('storage/fc_ktp_sekertaris/' . $permohonanDana->fc_ktp_sekertaris) }}"
                                                 class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                                             <!--end::Buttonpreview-->
                                         </div>
                                     </div>
                                 </div>
                                 {{-- <div class="d-flex justify-content-end border-top pt-10">
-                                    <a href="{{ url('/permohonan-dana/index') }}"
+                                    <a href="{{ secure_url('/permohonan-dana/index') }}"
                                         class="btn btn-primary font-weight-bold text-uppercase px-6 py-3">
                                         Kembali</a>
                                 </div> --}}

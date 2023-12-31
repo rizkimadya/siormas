@@ -57,7 +57,7 @@
                             
                             <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
                                 <div class="navi-item mb-2">
-                                    <a href="{{ url('permohonan-dana/ormas-pemohon') }}" class="navi-link py-4  @if(Route::currentRouteName() == 'permohonan-dana.dana') active @endif" >
+                                    <a href="{{ secure_url('permohonan-dana/ormas-pemohon') }}" class="navi-link py-4  @if(Route::currentRouteName() == 'permohonan-dana.dana') active @endif" >
                                         <span class="navi-icon mr-2">
                                             <span class="svg-icon">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
@@ -75,7 +75,7 @@
                                     </a>
                                 </div>
                                 <div class="navi-item mb-2 ">
-                                    <a href="{{url('permohonan-dana/verifikasi')}}" class="navi-link py-4 @if(Route::currentRouteName() == 'permohonan-dana.verifikasi') active @endif">
+                                    <a href="{{secure_url('permohonan-dana/verifikasi')}}" class="navi-link py-4 @if(Route::currentRouteName() == 'permohonan-dana.verifikasi') active @endif">
                                         <span class="navi-icon mr-2">
                                             <span class="svg-icon">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
@@ -94,7 +94,7 @@
                                     </a>
                                 </div>
                                 <div class="navi-item mb-2">
-                                    <a href="{{ url('permohonan-dana/menunggu') }}" class="navi-link py-4 @if(Route::currentRouteName() == 'permohonan-dana.menunggu') active @endif">
+                                    <a href="{{ secure_url('permohonan-dana/menunggu') }}" class="navi-link py-4 @if(Route::currentRouteName() == 'permohonan-dana.menunggu') active @endif">
                                         <span class="navi-icon mr-2">
                                             <span class="svg-icon">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->

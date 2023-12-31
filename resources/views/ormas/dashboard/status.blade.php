@@ -22,7 +22,7 @@
                         <span class="text-primary">Permohonan SKT Anda telah berhasil, silahkan lakukan preview </span>
                         <!--end::Content-->
                     </div>
-                    <a href="{{ asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
+                    <a href="{{ secure_asset('storage/skt/' . $latestStatusSkt->skt) }}" target="_blank"
                         class="btn btn-primary font-weight-bold px-4 py-2">Preview</a>
                     <!--end::Wrapper-->
                 </div>
@@ -66,7 +66,7 @@
                         <span class="text-black">Keterangan: {{ $latestStatusSkt->keterangan }}</span>
                         <!--end::Content-->
                     </div>
-                    <a href='{{ url('dashboard-ormas/permohonan-skt/') }}'
+                    <a href='{{ secure_url('dashboard-ormas/permohonan-skt/') }}'
                         class="btn btn-danger font-weight-bold px-4 py-2">Buat Permohonan</a>
                     <!--end::Wrapper-->
                 </div>

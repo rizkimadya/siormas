@@ -204,7 +204,7 @@
                                 <div class="col-xl-12 col-xxl-7">
                                     <div id="kt_form">
                                         <form class="form" enctype="multipart/form-data"
-                                            action="{{ url('/dashboard-ormas/permohonan-skt/store') }}" method="POST">
+                                            action="{{ secure_url('/dashboard-ormas/permohonan-skt/store') }}" method="POST">
                                             @csrf
                                             <!--begin::Wizard Step 1-->
                                             <div class="pb-5" data-wizard-type="step-content"

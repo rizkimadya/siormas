@@ -57,7 +57,7 @@
 
                                 <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('permohonan-dana/ormas-pemohon') }}"
+                                        <a href="{{ secure_url('permohonan-dana/ormas-pemohon') }}"
                                             class="navi-link py-4  @if (Route::currentRouteName() == 'permohonan-dana.dana') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -83,7 +83,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2 ">
-                                        <a href="{{ url('permohonan-dana/verifikasi') }}"
+                                        <a href="{{ secure_url('permohonan-dana/verifikasi') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'permohonan-dana.verifikasi') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -112,7 +112,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('permohonan-dana/menunggu') }}"
+                                        <a href="{{ secure_url('permohonan-dana/menunggu') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'permohonan-dana.menunggu') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">

@@ -12,21 +12,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5') }}" rel="stylesheet"
+    <link href="{{ secure_asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5') }}" rel="stylesheet"
+    <link href="{{ secure_asset('assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{ asset('assets/css/pages/wizard/wizard-1.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ secure_asset('assets/css/pages/wizard/wizard-1.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="{{ asset('assets/plugins/global/plugins.bundle.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5') }}" rel="stylesheet"
+    <link href="{{ secure_asset('assets/plugins/global/plugins.bundle.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ secure_asset('assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{ asset('assets/css/style.bundle.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ secure_asset('assets/css/style.bundle.css?v=7.0.5') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{ asset('assets/media/logos/logokesbangpol.png') }}" />
+    <link rel="shortcut icon" href="{{ secure_asset('assets/media/logos/logokesbangpol.png') }}" />
     <style>
         .dataTables_wrapper .dataTable th.sorting_asc:before {
             display: none;
@@ -48,7 +48,7 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" style="background-image: url({{ asset('assets/media/bg/bg-main.jpg') }})"
+<body id="kt_body" style="background-image: url({{ secure_asset('assets/media/bg/bg-main.jpg') }})"
     class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
     <!--begin::Main-->
     <!--begin::Header Mobile-->
@@ -56,7 +56,7 @@
     <div id="kt_header_mobile" class="header-mobile">
         <!--begin::Logo-->
         <span>
-            <img alt="Logo" src="{{ asset('assets/media/logos/logo-ormas.png') }}"
+            <img alt="Logo" src="{{ secure_asset('assets/media/logos/logo-ormas.png') }}"
                 class="logo-default max-h-30px" />
         </span>
         <!--end::Logo-->
@@ -101,7 +101,7 @@
                             <!--begin::Header Logo-->
                             <div class="header-logo">
                                 <span>
-                                    <img alt="Logo" src="{{ asset('assets/media/logos/logo-ormas.png') }}"
+                                    <img alt="Logo" src="{{ secure_asset('assets/media/logos/logo-ormas.png') }}"
                                         class="logo-default max-h-40px" />
                                 </span>
                             </div>
@@ -170,7 +170,7 @@
                                     <!--begin::Nav-->
                                     <div class="navi navi-spacer-x-0 pt-5">
                                         <div class="navi-footer px-8 py-5">
-                                            <a href="{{ secure_url('/logout') }}"
+                                            <a href="{{ secure_secure_url('/logout') }}"
                                                 class="btn btn-outline-primary font-weight-bold">Logout</a>
                                             <!-- <a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean font-weight-bold">Upgrade Plan</a> -->
                                         </div>
@@ -337,22 +337,22 @@
     </script>
     <!--end::Global Config-->
     <!--begin::Global Theme Bundle(used by all pages)-->
-    <script src="{{ asset('assets/plugins/global/plugins.bundle.js?v=7.0.5') }}"></script>
-    <script src="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5') }}"></script>
-    <script src="{{ asset('assets/js/scripts.bundle.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/global/plugins.bundle.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/js/scripts.bundle.js?v=7.0.5') }}"></script>
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
-    <script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5') }}"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="{{ asset('assets/js/pages/widgets.js?v=7.0.5') }}"></script>
-    <script src="{{ asset('assets/js/pages/custom/wizard/wizard-1.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/js/pages/widgets.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/js/pages/custom/wizard/wizard-1.js?v=7.0.5') }}"></script>
     <!--end::Page Scripts-->
     <!--begin::Page Vendors(used by this page)-->
-    <script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5') }}"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="{{ asset('assets/js/pages/crud/datatables/data-sources/html.js?v=7.0.5') }}"></script>
+    <script src="{{ secure_asset('assets/js/pages/crud/datatables/data-sources/html.js?v=7.0.5') }}"></script>
 </body>
 <!--end::Body-->
 

@@ -57,7 +57,7 @@
 
                                 <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('pelaporan-kegiatan/laporan-ormas') }}"
+                                        <a href="{{ secure_url('pelaporan-kegiatan/laporan-ormas') }}"
                                             class="navi-link py-4  @if (Route::currentRouteName() == 'pelaporan-kegiatan.laporan') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -83,7 +83,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2 ">
-                                        <a href="{{ url('pelaporan-kegiatan/verifikasi') }}"
+                                        <a href="{{ secure_url('pelaporan-kegiatan/verifikasi') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'pelaporan-kegiatan.verifikasi') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">

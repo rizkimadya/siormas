@@ -19,7 +19,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/logo_organisasi/'.$dokumen->logo_organisasi) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/logo_organisasi/'.$dokumen->logo_organisasi) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 			<div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
@@ -29,7 +29,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/surat_pengantar/'.$dokumen->surat_pengantar) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/surat_pengantar/'.$dokumen->surat_pengantar) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/sk_kemenkum_ham/'.$dokumen->sk_kemenkum_ham) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/sk_kemenkum_ham/'.$dokumen->sk_kemenkum_ham) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 			<div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
@@ -51,7 +51,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/sk_pengurus/'.$dokumen->sk_pengurus) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/sk_pengurus/'.$dokumen->sk_pengurus) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 		</div>
@@ -63,7 +63,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/sk_domisili/'.$dokumen->sk_domisili) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/sk_domisili/'.$dokumen->sk_domisili) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 			<div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
@@ -73,7 +73,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/surat_pernyataan/'.$dokumen->surat_pernyataan) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/surat_pernyataan/'.$dokumen->surat_pernyataan) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 		</div>
@@ -85,7 +85,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/biodata_pengurus/'.$dokumen->biodata_pengurus) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/biodata_pengurus/'.$dokumen->biodata_pengurus) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 			<div class="d-flex align-items-center border col bg-white px-6 py-4 rounded">
@@ -95,7 +95,7 @@
 					</div>
 					<!--end::Title-->
 					<!--begin::Buttonpreview-->
-					<a target="_blank" href='{{ asset('storage/akta_notaris/'.$dokumen->akta_notaris) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
+					<a target="_blank" href='{{ secure_asset('storage/akta_notaris/'.$dokumen->akta_notaris) }}' class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
 					<!--end::Buttonpreview-->
 			</div>
 		</div>

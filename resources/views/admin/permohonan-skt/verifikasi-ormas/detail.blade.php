@@ -3,7 +3,7 @@
     <div class="card card-custom">
         <!--begin::Header-->
         <div class="card-body d-flex border-0">
-            <a href="{{ url('permohonan-skt/verifikasi') }}" class="card-icon pr-4 py-0">
+            <a href="{{ secure_url('permohonan-skt/verifikasi') }}" class="card-icon pr-4 py-0">
                 <i class="flaticon2-left-arrow-1 text-dark"></i>
             </a>
             <h6 class="font-weight-bolder m-0 py-1">
@@ -177,7 +177,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/logo_organisasi/' . $verifikasi->logo_organisasi) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/logo_organisasi/' . $verifikasi->logo_organisasi) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -189,7 +189,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/surat_pengantar/' . $verifikasi->surat_pengantar) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/surat_pengantar/' . $verifikasi->surat_pengantar) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -203,7 +203,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/sk_kemenkum_ham/' . $verifikasi->sk_kemenkum_ham) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/sk_kemenkum_ham/' . $verifikasi->sk_kemenkum_ham) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -214,7 +214,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/sk_pengurus/' . $verifikasi->sk_pengurus) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/sk_pengurus/' . $verifikasi->sk_pengurus) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -228,7 +228,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/sk_domisili/' . $verifikasi->sk_domisili) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/sk_domisili/' . $verifikasi->sk_domisili) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -241,7 +241,7 @@
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
                         <a target="_blank"
-                            href='{{ asset('storage/surat_pernyataan/' . $verifikasi->surat_pernyataan) }}'
+                            href='{{ secure_asset('storage/surat_pernyataan/' . $verifikasi->surat_pernyataan) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -254,7 +254,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/biodata_pengurus/' . $verifikasi->biodata_pengurus) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/biodata_pengurus/' . $verifikasi->biodata_pengurus) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>
@@ -266,7 +266,7 @@
                         </div>
                         <!--end::Title-->
                         <!--begin::Buttonpreview-->
-                        <a target="_blank" href='{{ asset('storage/akta_notaris/' . $verifikasi->akta_notaris) }}'
+                        <a target="_blank" href='{{ secure_asset('storage/akta_notaris/' . $verifikasi->akta_notaris) }}'
                             class="btn btn-outline-primary font-weight-bold px-4 py-2">Preview</a>
                         <!--end::Buttonpreview-->
                     </div>

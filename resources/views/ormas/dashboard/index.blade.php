@@ -77,7 +77,7 @@
                             <!--begin::Toolbar-->
                             <div class="d-flex align-items-center">
                                 <!--begin::Button-->
-                                <a href="{{ url('/dashboard-ormas/permohonan-skt') }}" style="background-color:#87C027"
+                                <a href="{{ secure_url('/dashboard-ormas/permohonan-skt') }}" style="background-color:#87C027"
                                     class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2">Buat Permohonan</a>
                                 <button data-toggle="modal" data-target="#exampleModalCenter"
                                     style="background-color:#87C027"

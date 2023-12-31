@@ -26,7 +26,7 @@
                             <!--end::Item-->
                             <!--begin::Item-->
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
-                            <a href="{{ url('/pelaporan-kegiatan/index') }}"
+                            <a href="{{ secure_url('/pelaporan-kegiatan/index') }}"
                                 class="text-white text-hover-white opacity-75 hover-opacity-100">Pelaporan
                                 Kegiatan</a>
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
@@ -54,7 +54,7 @@
                             <div class="col-xl-12">
                                 <!--begin::Form-->
                                 <form class="form" enctype="multipart/form-data" method="POST"
-                                    action="{{ url('pelaporan-kegiatan/store') }}">
+                                    action="{{ secure_url('pelaporan-kegiatan/store') }}">
                                     <!--begin::Form Wizard Step 1-->
                                     @csrf
                                     <div class="pb-5">
@@ -191,7 +191,7 @@
                                         </div>
                                         <div class="d-flex justify-content-end border-top pt-10">
                                             <div>
-                                                <a href="{{ url('/pelaporan-kegiatan/index') }}"
+                                                <a href="{{ secure_url('/pelaporan-kegiatan/index') }}"
                                                     class="btn btn-secondary font-weight-bold text-uppercase px-6 py-3 mr-2">Batal</a>
                                                 <button type="submit"
                                                     class="btn btn-primary font-weight-bold text-uppercase px-6 py-3">Kirim

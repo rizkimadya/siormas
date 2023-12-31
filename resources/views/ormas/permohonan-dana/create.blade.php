@@ -26,7 +26,7 @@
                             <!--end::Item-->
                             <!--begin::Item-->
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
-                            <a href="{{ url('/permohonan-dana/index') }}"
+                            <a href="{{ secure_url('/permohonan-dana/index') }}"
                                 class="text-white text-hover-white opacity-75 hover-opacity-100">Permohonan
                                 Dana</a>
                             <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
@@ -53,7 +53,7 @@
                         <div class="row justify-content-center my-10 mx-8 px-8 my-lg-15 px-lg-10">
                             <div class="col-xl-12">
                                 <!--begin::Form-->
-                                <form class="form" action="{{ url('/permohonan-dana/store') }}" method="POST"
+                                <form class="form" action="{{ secure_url('/permohonan-dana/store') }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="pb-5">
@@ -158,7 +158,7 @@
                                         </div>
                                         <div class="d-flex justify-content-end border-top pt-10">
                                             <div>
-                                                <a href="{{ url('/permohonan-dana/index') }}"
+                                                <a href="{{ secure_url('/permohonan-dana/index') }}"
                                                     class="btn btn-secondary font-weight-bold text-uppercase px-6 py-3 mr-2">Batal</a>
                                                 <button type="submit"
                                                     class="btn btn-primary font-weight-bold text-uppercase px-6 py-3">Kirim

@@ -68,11 +68,11 @@
                                         @endphp
 
                                         @if ($latestSkt != null)
-                                            <img src="{{ asset('storage/logo_organisasi/' . $latestSkt->logo_organisasi) }}"
+                                            <img src="{{ secure_asset('storage/logo_organisasi/' . $latestSkt->logo_organisasi) }}"
                                                 width="100%" alt="">
                                         @else
                                             <div class="symbol-label"
-                                                style="background-image:url('assets/media/users/logo_ormas.png')"></div>
+                                                style="background-image:secure_url('assets/media/users/logo_ormas.png')"></div>
                                         @endif
                                     </div>
                                     {{-- <div class="bgi-no-repeat bgi-size-cover rounded min-h-100px w-100" style="background-image: url(assets/media/stock-600x400/img-72.jpg)"></div> --}}
@@ -87,7 +87,7 @@
                                 <!--end::Contact-->
                                 <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('dashboard-ormas/status-skt') }}"
+                                        <a href="{{ secure_url('dashboard-ormas/status-skt') }}"
                                             class="navi-link py-4  @if (Route::currentRouteName() == 'dashboard-ormas.status') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -113,7 +113,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2 ">
-                                        <a href="{{ url('dashboard-ormas/keorganisasian') }}"
+                                        <a href="{{ secure_url('dashboard-ormas/keorganisasian') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'dashboard-ormas.keorganisasian') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -140,7 +140,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('dashboard-ormas/kepengurusan') }}"
+                                        <a href="{{ secure_url('dashboard-ormas/kepengurusan') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'dashboard-ormas.kepengurusan') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -166,7 +166,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('dashboard-ormas/dokumen') }}"
+                                        <a href="{{ secure_url('dashboard-ormas/dokumen') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'dashboard-ormas.dokumen') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">

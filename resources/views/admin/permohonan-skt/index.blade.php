@@ -61,7 +61,7 @@
 
                                 <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('permohonan-skt/ormas-terdaftar') }}"
+                                        <a href="{{ secure_url('permohonan-skt/ormas-terdaftar') }}"
                                             class="navi-link py-4  @if (Route::currentRouteName() == 'permohonan-skt.ormas') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -87,7 +87,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2 ">
-                                        <a href="{{ url('permohonan-skt/verifikasi') }}"
+                                        <a href="{{ secure_url('permohonan-skt/verifikasi') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'permohonan-skt.verifikasi') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
@@ -116,7 +116,7 @@
                                         </a>
                                     </div>
                                     <div class="navi-item mb-2">
-                                        <a href="{{ url('permohonan-skt/menunggu') }}"
+                                        <a href="{{ secure_url('permohonan-skt/menunggu') }}"
                                             class="navi-link py-4 @if (Route::currentRouteName() == 'permohonan-skt.menunggu') active @endif">
                                             <span class="navi-icon mr-2">
                                                 <span class="svg-icon">
