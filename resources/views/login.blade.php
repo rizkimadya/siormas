@@ -121,7 +121,7 @@
                         </div>
                         <!--begin::Form-->
                         <div id="kt_login_signup_form">
-                            <form class="form" action="{{ secure_secure_url('/regis') }}" method="POST">
+                            <form class="form" action="{{ secure_url('/regis') }}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <input class="form-control form-control-solid h-auto py-3 px-4" type="text"
