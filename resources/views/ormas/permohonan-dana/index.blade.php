@@ -44,10 +44,7 @@
                     </div>
                     <!--end::Heading-->
                 </div>
-<<<<<<< HEAD
-               
-=======
->>>>>>> ee7cba047f1ad2e0f4f4d4440771239ec37ba265
+
                 @if ($dataPermohonanDana != null)
                     <div class="ms-auto">
                         <a href="{{ url('/permohonan-dana/create') }}" style="background-color:#87C027"
@@ -68,21 +65,13 @@
                     </div>
                 @endif
                 @php
-<<<<<<< HEAD
-                $user = auth()->user();
-                $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
-                    ->latest()
-                    ->first();
-                @endphp
-                @if ($dataSkt->status == "Berhasil Kirim SKT")
-=======
                     $user = auth()->user();
                     $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
                         ->latest()
                         ->first();
                 @endphp
                 @if ($dataSkt != null && $dataPermohonanDana == null && $dataSkt->status == 'Berhasil Kirim SKT')
->>>>>>> ee7cba047f1ad2e0f4f4d4440771239ec37ba265
+                    >
                     <div class="ms-auto">
                         <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
                             class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
@@ -98,10 +87,6 @@
                         </button>
                     </div>
                 @endif
-<<<<<<< HEAD
-=======
-                <!--end::Info-->
->>>>>>> ee7cba047f1ad2e0f4f4d4440771239ec37ba265
             </div>
         </div>
         <!--end::Subheader-->
@@ -181,9 +166,12 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>1. Surat Permohonan tertulis kepada Bupati Kab. Wajo <a href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing" target="_blank"
-                                class="font-weight-bold">(Download)</a> </p>
-                        <p>2. Proposal <a href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing" target="_blank" class="font-weight-bold">(Download)</a> </p>
+                        <p>1. Surat Permohonan tertulis kepada Bupati Kab. Wajo <a
+                                href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing"
+                                target="_blank" class="font-weight-bold">(Download)</a> </p>
+                        <p>2. Proposal <a
+                                href="https://drive.google.com/drive/folders/1wkVEboMfLeL1vxSpfyyCjC_asKizjXMA?usp=sharing"
+                                target="_blank" class="font-weight-bold">(Download)</a> </p>
                         <p>3. Fotocopy KTP Ketua/Pimpinan dan Sekertaris</p>
                         <p>4. Surat Keterangan Domisili dari Lurah/Kepala Desa mengetahui Camat setempat</p>
                         <p>5. Fotocopy Buku Rekening</p>
