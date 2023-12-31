@@ -1,4 +1,4 @@
-@extends('components.index', ['title' => 'Permohonan Dana'])
+@extends('app', ['title' => 'Permohonan Dana'])
 @section('content')
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         @php

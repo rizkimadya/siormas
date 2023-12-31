@@ -1,4 +1,4 @@
-@extends('components.index', ['title' => 'Dashboard Ormas'])
+@extends('app', ['title' => 'Dashboard Ormas'])
 @section('content')
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Subheader-->

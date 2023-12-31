@@ -1,4 +1,4 @@
-@extends('components.index', ['title' => 'Pelaporan Kegiatan'])
+@extends('app', ['title' => 'Pelaporan Kegiatan'])
 @section('content')
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Subheader-->
