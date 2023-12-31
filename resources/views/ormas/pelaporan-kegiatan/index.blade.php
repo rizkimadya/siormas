@@ -37,7 +37,7 @@
                         </div>
                         <!--end::Breadcrumb-->
                     </div>
-                <!--end::Heading-->
+                    <!--end::Heading-->
                 </div>
                 @if ($dataPelaporanKegiatan != null)
                     <div class="ms-auto">
@@ -59,6 +59,7 @@
                     </div>
                 @endif
                 @php
+<<<<<<< HEAD
                 $user = auth()->user();
                 $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
                     ->latest()
@@ -80,6 +81,29 @@
                     </button>
                 </div>
             @endif
+=======
+                    $user = auth()->user();
+                    $dataSkt = \App\Models\SKT::where('ormas_id', $user->id)
+                        ->latest()
+                        ->first();
+                @endphp
+                @if ($dataSkt != null && $dataPelaporanKegiatan == null && $dataSkt->status == 'Berhasil Kirim SKT')
+                    <div class="ms-auto">
+                        <button data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#87C027"
+                            class="btn btn-transparent-white font-weight-bold py-2 px-2 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="26px" height="26px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd ">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <circle fill="#ffffff" opacity="0.3" cx="12" cy="12" r="10" />
+                                    <rect fill="#ffffff" x="11" y="10" width="2" height="7" rx="1" />
+                                    <rect fill="#fefefe" x="11" y="7" width="2" height="2" rx="1" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                @endif
+>>>>>>> ee7cba047f1ad2e0f4f4d4440771239ec37ba265
                 <!--end::Info-->
             </div>
         </div>
@@ -160,7 +184,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>1. Laporan Kegiatan<a href="javascript:;" class="font-weight-bold">(Download)</a> </p>
+                        <p>1. Laporan Kegiatan<a
+                                href="https://drive.google.com/drive/folders/1jyiwbxbgzfub3e5s7T-b-hX51zQ-jrm2?usp=sharing"
+                                target="_blank" class="font-weight-bold">(Download)</a> </p>
                         <p>2. Foto Kegiatan sebanyak 2</p>
                     </div>
                 </div>
@@ -288,4 +314,5 @@
             </div>
             <!--end::Container-->
         </div>
+    </div>
     @endsection

@@ -35,7 +35,7 @@
                                     @if ($item->status == 'Berhasil Kirim SP2P')
                                         <p class="text-primary"
                                             style="background-color: #EEFBF0; padding:6px 10px; border-radius:6px;">
-                                            Terima Dana
+                                            Terima SP2P
                                         </p>
                                     @else
                                         <p class="text-warning"

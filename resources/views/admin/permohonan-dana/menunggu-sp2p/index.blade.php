@@ -4,7 +4,7 @@
         <!--begin::Header-->
         <div class="card-body d-flex border-0">
             <h6 class="font-weight-bolder m-0 py-1">
-                Menunggu SP2P
+                Menunggu Tanda Terima Dana
             </h6>
         </div>
         <!--end::Header-->

@@ -238,10 +238,13 @@
                 .then(kelurahanData => {
                     // Tambahkan opsi kelurahan dari data yang diambil
                     kelurahanData.forEach(kelurahan => {
-                        const option = document.createElement('option');
-                        option.value = kelurahan.id;
-                        option.text = kelurahan.name;
-                        kelurahanSelect.appendChild(option);
+                        // Hanya tambahkan opsi jika belum ada
+                        if (!kelurahanSelect.querySelector(`option[value="${kelurahan.id}"]`)) {
+                            const option = document.createElement('option');
+                            option.value = kelurahan.id;
+                            option.text = kelurahan.name;
+                            kelurahanSelect.appendChild(option);
+                        }
                     });
                 })
                 .catch(error => {
