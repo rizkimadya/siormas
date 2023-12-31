@@ -39,7 +39,7 @@
             id="kt_login">
             <!--begin::Aside-->
             <div class="login-aside d-flex flex-row-auto bgi-size-cover bgi-no-repeat p-10 p-lg-10"
-                style="background-image: url(assets/media/bg/bg_login1.jpg);">
+                style="background-image: url({{ secure_url('assets/media/bg/bg_login1.jpg') }});">
                 <!--begin: Aside Container-->
                 <div class="d-flex flex-row-fluid flex-column justify-content-between">
                     <!--begin: Aside header-->
